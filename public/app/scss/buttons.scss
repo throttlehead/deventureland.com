@@ -1,0 +1,24 @@
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+@import "variables";
+
+.btn {
+	transition: background $transition-speed $transition-ease;
+}
+
+.btn .glyphicons {
+	line-height: inherit;
+}
+
+.btn-clear {
+	background-color: transparent;
+	color: #fff;
+}
+
+.btn-clear:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.btn:focus {
+	outline:0;
+}

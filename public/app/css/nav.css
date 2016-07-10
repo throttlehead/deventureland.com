@@ -1,0 +1,100 @@
+.app-nav .navbar {
+  background: transparent;
+  padding: 0 1em;
+  transition: all 170ms ease-in; }
+.app-nav .navbar-header {
+  background: transparent;
+  transition: backgrouund 170ms ease-in; }
+.app-nav .navbar-brand {
+  width: 255px;
+  margin-top: 10px; }
+  .app-nav .navbar-brand img {
+    width: 100%;
+    height: auto; }
+.app-nav .nav-toggle-btn {
+  line-height: 4rem;
+  padding: 0 .8rem;
+  display: none; }
+  .app-nav .nav-toggle-btn .glyphicons {
+    font-size: 1.5rem; }
+.app-nav .nav-item .nav-link {
+  color: #fafafa;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  line-height: 4rem;
+  font-size: 1.2rem;
+  padding: 0 .8rem;
+  transition: all 170ms ease-in; }
+  .app-nav .nav-item .nav-link .glyphicons {
+    line-height: inherit;
+    margin-right: 5px;
+    font-size: 20px;
+    top: 0px; }
+.app-nav .nav-item .nav-link:hover {
+  color: #ccc; }
+.app-nav .nav-item.active .nav-link {
+  color: #f47c6f !important;
+  border-color: #fff;
+  text-shadow: none; }
+
+.app-nav.nav-scrolled .navbar {
+  background: rgba(0, 0, 0, 0.35);
+  padding: .0 1rem; }
+.app-nav.nav-scrolled .nav-item .nav-link {
+  color: #fafafa;
+  text-shadow: none;
+  margin-top: 3px; }
+.app-nav.nav-scrolled .nav-item.active .nav-link {
+  border-color: #fafafa; }
+
+.app-nav.collapse-shown .navbar {
+  background: rgba(0, 0, 0, 0.85); }
+
+.app-nav.sub-nav .navbar {
+  background: rgba(0, 0, 0, 0.85); }
+
+@media only screen and (max-width: 1024px) {
+  .app-nav .navbar {
+    background: none;
+    padding: 0; }
+  .app-nav .navbar-brand {
+    width: 455px;
+    margin: .5em 0 0 0; }
+  .app-nav .nav-toggle-btn {
+    display: inline-block; }
+    .app-nav .nav-toggle-btn .glyphicons {
+      font-size: 2.5em; }
+  .app-nav .navbar-header {
+    padding: 1em;
+    padding-top: .5em;
+    float: none !important; }
+  .app-nav .navbar-nav {
+    padding: 1em 0; }
+  .app-nav #app-nav-collapse {
+    float: none !important; }
+  .app-nav .nav-item {
+    float: none;
+    margin: 1em 0; }
+    .app-nav .nav-item .nav-link {
+      font-size: 2em;
+      text-align: center;
+      line-height: 3em;
+      border-bottom: none !important; }
+      .app-nav .nav-item .nav-link .glyphicons {
+        font-size: 1em; }
+    .app-nav .nav-item .nav-link:hover {
+      color: #fff;
+      background: rgba(205, 205, 205, 0.175); }
+
+  .app-nav.collapse-shown .navbar {
+    height: 100%;
+    overflow: scroll; } }
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+  .app-nav .navbar-brand {
+    width: 300px;
+    margin: 0; }
+  .app-nav .nav-toggle-btn {
+    line-height: 2.5em; }
+    .app-nav .nav-toggle-btn .glyphicons {
+      font-size: 2em; } }

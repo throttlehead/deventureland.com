@@ -1,0 +1,12 @@
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+@import "variables";
+
+.glyphicons {
+	font-size: 1rem;
+	padding-right: .5rem;
+}
+
+.btn .glyphicons:only-child {
+	padding-right: 0px;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "deventureland.com",
+  "version": "1.0",
+  "description": "The personal portfolio and blog of Jacob Smits",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Jacob Smits <jacobsmits2509@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.3",
+    "bootstrap": "4.0.0-alpha",
+    "mustache.js": "~2.1.3",
+    "wow": "wow.js#~1.1.2",
+    "animate.css": "~3.4.0",
+    "slick-carousel": "~1.5.8",
+    "waypoints": "~4.0.0",
+    "text": "requirejs-text#~2.0.14",
+    "require-css": "~0.1.8",
+    "jquery-backstretch": "~2.0.4",
+    "jquery.stellar": "stellar.js#~0.6.2",
+    "PreloadJS": "~0.6.1",
+    "EaselJS": "easeljs#~0.8.1",
+    "TweenJS": "~0.6.1"
+  }
+}
