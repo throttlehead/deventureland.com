@@ -22,14 +22,6 @@ Route::get('/home', function () {
   return view('app');
 });
 
-Route::get('/blog', function () {
-  return view('app');
-});
-
-Route::get('/projects', function () {
-  return view('app');
-});
-
 Route::get('/sitemap.xml', function() {
   $sitemap = App::make("sitemap");
   $sitemap->add(URL::to('/'), Carbon::now(), '1.0', 'daily');

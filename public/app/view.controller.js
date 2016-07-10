@@ -4,10 +4,8 @@ define([
   "backbone",
   "views/nav",
   "views/home/home",
-  "views/blog/blog",
-  "views/projects/projects",
   "views/404",
-], function($, _, Backbone, Nav, Home, Blog, Projects, NotFound){
+], function($, _, Backbone, Nav, Home, NotFound){
 
   var Controller = Backbone.View.extend({
     className: "view_controller",
@@ -16,14 +14,6 @@ define([
       "home": {
         "view": Home,
         "title": "Deventureland"
-      },
-      "blog": {
-        "view": Blog,
-        "title": "Deventureland - Blog"
-      },
-      "projects": {
-        "view": Projects,
-        "title": "Deventureland - Projects"
       },
       "not_found": {
         "view": NotFound,

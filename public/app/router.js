@@ -9,8 +9,6 @@ define([
     routes: {
     	''           : 'showHome',
       'home'       : 'showHome',
-      'blog'	     : 'showBlog',
-      'projects'   : 'showProjects',
 
       '*nomatch': 		'showNotFound'
     },

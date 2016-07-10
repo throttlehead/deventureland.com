@@ -5,9 +5,8 @@ define([
   "backstretch",
   "textrotator",
   "Waypoint",  
-  "views/base",
-  "views/animations/cycle.animation"
-], function($, _, Backbone, backstretch, textrotator, Waypoint, BaseView, CycleAnimation){
+  "views/base"
+], function($, _, Backbone, backstretch, textrotator, Waypoint, BaseView){
 
   var Home = BaseView.extend({
     className: "home",
