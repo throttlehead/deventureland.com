@@ -32,6 +32,7 @@
     "jquery.stellar": "stellar.js#~0.6.2",
     "PreloadJS": "~0.6.1",
     "EaselJS": "easeljs#~0.8.1",
-    "TweenJS": "~0.6.1"
+    "TweenJS": "~0.6.1",
+    "requirejs": "^2.2.0"
   }
 }
