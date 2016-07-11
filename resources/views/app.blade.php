@@ -13,9 +13,9 @@
 	    <div class="app" id="app"></div>
 	  </div>
     <?php if (App::environment('production')) { ?>
-      <script data-main="/app/deventureland.production.js" src="/app/libraries/require.js"></script>
+      <script data-main="/app/deventureland.production.js" src="/app/libraries/requirejs/require.js"></script>
     <?php } else { ?>
-      <script data-main="/app/deventureland.develop.js" src="/app/libraries/require.js"></script>
+      <script data-main="/app/deventureland.develop.js" src="/app/libraries/requirejs/require.js"></script>
     <?php } ?>  
   </body>
 </html>
