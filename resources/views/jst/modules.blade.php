@@ -19,5 +19,5 @@
 		  </div>
 		</form>
 	</div>
-	<div class="hide_btn">X</div>
+	<div class="hide_btn"><span class="glyphicons glyphicons-remove"></span></div>
 </script>

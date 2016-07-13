@@ -13,7 +13,7 @@
 			</div>
 			<div class="inner">
 				<h1>Hello, I'm Jacob</h1>
-				<div class="slide-rotator">Full Stack Developer, Motorcyclist, Musician (sorta)</div>
+				<div class="slide-rotator">Full Stack Developer, Motorcyclist, Sorta Musician</div>
 			</div>
 		</div>
 	</div>

@@ -66,11 +66,7 @@ body {
     margin-right: 1em; }
 
 .glyphicons {
-  font-size: 1rem;
-  padding-right: .5rem; }
-
-.btn .glyphicons:only-child {
-  padding-right: 0px; }
+  font-size: inherit; }
 
 #contactForm form {
   margin-top: 3em; }
@@ -128,7 +124,7 @@ body {
   padding: 0 .8rem;
   display: none; }
   .app-nav .nav-toggle-btn .glyphicons {
-    font-size: 1.5rem; }
+    font-size: 1.5em; }
 .app-nav .nav-item .nav-link {
   color: #fafafa;
   cursor: pointer;
@@ -140,8 +136,7 @@ body {
   transition: all 250ms ease-in; }
   .app-nav .nav-item .nav-link .glyphicons {
     line-height: inherit;
-    margin-right: 5px;
-    font-size: 20px;
+    margin-right: .3em;
     top: 0px; }
 .app-nav .nav-item .nav-link:hover {
   color: #ccc; }
