@@ -13,8 +13,7 @@ body {
   html {
     font-size: 15px; } }
 .btn {
-  transition: all 250ms ease-in;
-  border-radius: 0px; }
+  transition: all 250ms ease-in; }
 
 .btn .glyphicons {
   font-size: inherit;
@@ -37,15 +36,15 @@ body {
   outline: 0; }
 
 .btn-primary {
-  color: #fafafa;
+  color: #eee;
   background-color: #ff6c5c;
   border-color: #ff6c5c; }
   .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
-    color: #fafafa;
+    color: #eee;
     background-color: #ff3e29;
     border-color: #ff351f; }
   .btn-primary:hover {
-    color: #fafafa;
+    color: #eee;
     background-color: #ff3e29;
     border-color: #ff351f; }
   .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
@@ -57,8 +56,12 @@ body {
     background-color: #ff6c5c;
     border-color: #ff6c5c; }
 
-.form-control {
-  border-radius: 0px; }
+.card {
+  font-size: 1.1em; }
+
+.card-dark {
+  background-color: #222222;
+  border-color: #222222; }
 
 .form-btn-row {
   margin-top: 2em; }
@@ -85,7 +88,7 @@ body {
   background-color: #333;
   visibility: hidden;
   opacity: 0;
-  color: #fafafa;
+  color: #eee;
   transition: all 250ms ease-in; }
   .full_screen .hide_btn {
     font-size: 2em;
@@ -95,7 +98,7 @@ body {
     right: 0;
     padding: 1.5rem 2rem;
     cursor: pointer;
-    color: #fafafa;
+    color: #eee;
     transition: all 250ms ease-in; }
   .full_screen .hide_btn:hover {
     background: rgba(255, 255, 255, 0.1); }
@@ -126,7 +129,7 @@ body {
   .app-nav .nav-toggle-btn .glyphicons {
     font-size: 1.5em; }
 .app-nav .nav-item .nav-link {
-  color: #fafafa;
+  color: #eee;
   cursor: pointer;
   border-bottom: 3px solid transparent;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);

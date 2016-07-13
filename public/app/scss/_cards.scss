@@ -2,14 +2,11 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
-.form-control {
-	
+.card {
+	font-size: 1.1em;
 }
 
-.form-btn-row {
-	margin-top: 2em;
-
-	.btn:not(:first-child) {
-		margin-right: 1em;
-	}
+.card-dark {
+	background-color: #222222;
+	border-color: #222222;
 }
