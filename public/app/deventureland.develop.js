@@ -3,6 +3,7 @@ require.config({
     jquery: "libraries/jquery/dist/jquery",
     underscore: "libraries/underscore/underscore",
     backbone: "libraries/backbone/backbone",
+    tether: "libraries/tether/dist/js/tether",
     bootstrap: "libraries/bootstrap/dist/js/bootstrap",
     css: "libraries/require-css/css",
     Waypoint: "libraries/waypoints/lib/jquery.waypoints",
@@ -20,8 +21,12 @@ require.config({
       exports: "jQuery"
     },
 
-    "bootstrap": {
+    "tether": {
       deps: ["jquery"],
+    },
+
+    "bootstrap": {
+      deps: ["jquery", "tether"],
     },
 
     "underscore": {
@@ -81,8 +86,12 @@ require.config({
   }  
 });
 
+require(['tether'], function (Tether) {
+  window.Tether = Tether;
+});
+
 require([
   "app",
-], function(App){
+], function(App, tether){
   App.initialize();
 });

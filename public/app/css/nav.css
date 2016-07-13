@@ -28,7 +28,7 @@
   transition: all 250ms ease-in; }
   .app-nav .nav-item .nav-link .glyphicons {
     line-height: inherit;
-    margin-right: .3em;
+    margin-right: .4em;
     top: 0px; }
 .app-nav .nav-item .nav-link:hover {
   color: #ccc; }

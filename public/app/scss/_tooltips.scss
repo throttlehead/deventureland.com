@@ -1,0 +1,27 @@
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+@import "variables";
+
+.tooltip-large {
+	font-size: 1.25em;
+
+	.tooltip-inner {
+		max-width: 100%;
+		padding: .5rem 1rem;
+	}
+}
+
+.tooltip-primary {
+	.tooltip-inner {
+		background-color: $brand-primary;
+
+		a {
+			color: $font-color-inverse !important;
+			text-decoration: none !important;
+		}
+	}
+}
+
+.tooltip-primary.bs-tether-element-attached-bottom .tooltip-arrow, .tooltip.tooltip-top .tooltip-arrow {
+	border-top-color: $brand-primary;
+}

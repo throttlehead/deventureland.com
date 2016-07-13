@@ -63,13 +63,29 @@ body {
   background-color: #222222;
   border-color: #222222; }
 
+.tooltip-large {
+  font-size: 1.25em; }
+  .tooltip-large .tooltip-inner {
+    max-width: 100%;
+    padding: .5rem 1rem; }
+
+.tooltip-primary .tooltip-inner {
+  background-color: #ff6c5c; }
+  .tooltip-primary .tooltip-inner a {
+    color: #eee !important;
+    text-decoration: none !important; }
+
+.tooltip-primary.bs-tether-element-attached-bottom .tooltip-arrow, .tooltip.tooltip-top .tooltip-arrow {
+  border-top-color: #ff6c5c; }
+
 .form-btn-row {
   margin-top: 2em; }
   .form-btn-row .btn:not(:first-child) {
     margin-right: 1em; }
 
 .glyphicons {
-  font-size: inherit; }
+  font-size: inherit;
+  line-height: inherit; }
 
 #contactForm form {
   margin-top: 3em; }
@@ -139,7 +155,7 @@ body {
   transition: all 250ms ease-in; }
   .app-nav .nav-item .nav-link .glyphicons {
     line-height: inherit;
-    margin-right: .3em;
+    margin-right: .4em;
     top: 0px; }
 .app-nav .nav-item .nav-link:hover {
   color: #ccc; }
@@ -276,3 +292,11 @@ body {
 .social .message:hover {
   background: #7CC04B;
   border-color: #7CC04B; }
+
+#hoodLatch {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent; }
