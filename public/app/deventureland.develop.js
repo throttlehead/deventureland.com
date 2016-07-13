@@ -9,7 +9,7 @@ require.config({
     Waypoint: "libraries/waypoints/lib/jquery.waypoints",
     slick: "libraries/slick-carousel/slick/slick",
     backstretch: "libraries/jquery-backstretch/jquery.backstretch",
-    textrotator: "libraries/simple-text-rotator/jquery.simple-text-rotator.min",
+    textrotator: "plugins/simple-text-rotator/jquery.simple-text-rotator.min",
     stellar: "libraries/jquery.stellar/jquery.stellar",
     EasleJS: "libraries/EaselJS/lib/easeljs-0.8.1.combined",
     TweenJS: "libraries/TweenJS/lib/tweenjs-0.6.1.combined",
