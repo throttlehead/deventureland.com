@@ -5,8 +5,9 @@ define([
   "backstretch",
   "textrotator",
   "Waypoint",  
-  "views/base"
-], function($, _, Backbone, backstretch, textrotator, Waypoint, BaseView){
+  "views/base",
+  "views/home/github.frame"
+], function($, _, Backbone, backstretch, textrotator, Waypoint, BaseView, GitHubFrame){
 
   var Home = BaseView.extend({
     className: "home",
@@ -14,12 +15,13 @@ define([
     waypoints: {},
 
     events: {
-      'click .message'  : 'showMessage'
+      'click .hood_latch': 'popHood'   
     },
 
 
     initialize: function(options) {
       BaseView.prototype.initialize.apply(this, arguments);
+      this.initSubviews();
       this.initListeners();
     },
 
@@ -27,6 +29,9 @@ define([
     render: function() {
     	var template = _.template( window.templates.find("#home_t").html(), {});
     	this.$el.html( template );
+
+      this.$el.find('#engineBay').append(this.subviews.engine_frame.render().el);
+
     	return this;
     },
 
@@ -37,10 +42,16 @@ define([
     },
 
 
+    initSubviews: function() {
+      this.subviews.engine_frame = new GitHubFrame();
+    },
+
+
     viewRendered: function() {
     	this.setSlideCss();
     	this.initBackStrech();
     	this.initTextRotator();
+      this.initHoodLatch();
     },
     
 
@@ -78,8 +89,27 @@ define([
     },
 
 
-    showMessage: function() {
+    initContactForm: function() {
       
+    },
+
+
+    initHoodLatch: function() {
+      var view = this;
+
+      setTimeout(function() {
+        view.showHoodLatch();
+      }, 2000);
+    },
+
+
+    showHoodLatch: function() {
+
+    },
+
+
+    popHood: function() {
+      this.subviews.engine_frame.load(window.app.data.github_link);
     }
 
 
