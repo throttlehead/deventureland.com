@@ -4,6 +4,7 @@
 
 html {
 	font-size: 15px;
+	color: $font-color;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
 
 @import "buttons";
 @import "glyphicons";
+@import "modules";
 @import "nav";
 @import "footer";
 @import "home";

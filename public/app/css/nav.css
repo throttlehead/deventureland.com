@@ -1,10 +1,10 @@
 .app-nav .navbar {
   background: transparent;
   padding: 0 1em;
-  transition: all 170ms ease-in; }
+  transition: all 250ms ease-in; }
 .app-nav .navbar-header {
   background: transparent;
-  transition: backgrouund 170ms ease-in; }
+  transition: backgrouund 250ms ease-in; }
 .app-nav .navbar-brand {
   width: 255px;
   margin-top: 10px; }
@@ -25,7 +25,7 @@
   line-height: 4rem;
   font-size: 1.2rem;
   padding: 0 .8rem;
-  transition: all 170ms ease-in; }
+  transition: all 250ms ease-in; }
   .app-nav .nav-item .nav-link .glyphicons {
     line-height: inherit;
     margin-right: 5px;
@@ -34,7 +34,7 @@
 .app-nav .nav-item .nav-link:hover {
   color: #ccc; }
 .app-nav .nav-item.active .nav-link {
-  color: #f47c6f !important;
+  color: #ededed !important;
   border-color: #fff;
   text-shadow: none; }
 
@@ -49,10 +49,10 @@
   border-color: #fafafa; }
 
 .app-nav.collapse-shown .navbar {
-  background: rgba(0, 0, 0, 0.85); }
+  background: #333; }
 
 .app-nav.sub-nav .navbar {
-  background: rgba(0, 0, 0, 0.85); }
+  background: #333; }
 
 @media only screen and (max-width: 1024px) {
   .app-nav .navbar {

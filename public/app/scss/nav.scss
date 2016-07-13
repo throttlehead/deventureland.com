@@ -2,6 +2,12 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
+$nav-open-color: #333;
+$nav-link-color: $font-color-inverse;
+$nav-link-active-color: darken($font-color-inverse, 5%);
+$nav-link-color-scrolled: #fafafa;
+$nav-bg-transparancy: rgba(0, 0, 0, .35);
+
 .app-nav {
 	.navbar {
 		background: transparent;

@@ -13,8 +13,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://drive.google.com/file/d/0B7BoqELqKgWoQjBPVk14RGJIUFU/view?usp=sharing" target="_blank"><span class="glyphicons glyphicons-download"></span> Download CV</a>
-        </li>         
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact"><span class="glyphicons glyphicons-envelope"></span></a>
+        </li>          
       </ul>
     </div>
   </nav>
+  <div id="contactAppend"></div>
 </script>

@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'Waypoint',
-  'views/base'
-], function($, _, Backbone, Waypoint, BaseView){
+  'views/base',
+  "views/modules/contact.form"
+], function($, _, Backbone, Waypoint, BaseView, ContactForm){
 
   var Nav = BaseView.extend({
 
@@ -12,14 +13,16 @@ define([
     className: 'app-nav',
 
     events: {
-      'show.bs.collapse #app-nav-collapse'    : 'onCollapseShow',
-      'hide.bs.collapse #app-nav-collapse'    : 'onCollapseHide',
-      'click .nav-item'                       : 'collapse'
+      'show.bs.collapse #app-nav-collapse': 'onCollapseShow',
+      'hide.bs.collapse #app-nav-collapse': 'onCollapseHide',
+      'click .nav-item': 'collapse',
+      'click #contact': 'showContactForm',
     },
 
   	
     initialize: function(options) {
       BaseView.prototype.initialize.apply(this, arguments);
+      this.initSubviews();
       this.initListeners();
       this.initWaypoint();
     },
@@ -27,7 +30,10 @@ define([
 
     render: function() {
       var template = _.template( window.templates.find("#nav_t").html(), {});
+
       this.$el.html( template );
+      this.$el.find('#contactAppend').html(this.subviews.contact_form.render().el);
+
       this.setCollapse();
       return this;      
     },
@@ -37,6 +43,11 @@ define([
       this.listenTo( this.app.view_controller, 'resize', this.onResize );
       this.listenTo()
     },
+
+
+    initSubviews: function() {
+      this.subviews.contact_form = new ContactForm();
+    },    
 
 
     initWaypoint: function() {
@@ -118,6 +129,11 @@ define([
     onCollapseShow: function() {
       this.$el.addClass('collapse-shown')
       this.trigger('collapseShow');
+    },
+
+
+    showContactForm: function() {
+      this.subviews.contact_form.show();
     }
 
   });
