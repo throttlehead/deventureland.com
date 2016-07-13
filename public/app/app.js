@@ -15,10 +15,13 @@ define([
 ], function($, _, Backbone, bootstrap, css, Router, ViewController){
 
   var initialize = function() {
-  	window.app = {
-  		collections: {},
-  		models: {}
-  	};
+    if (typeof window.app !== "object") {
+      window.app = {};
+      window.app.data = {};
+    }
+
+  	window.app.data.collections = {};
+    window.app.data.models = {};
 
     window.templates = $('.templates');
   	
