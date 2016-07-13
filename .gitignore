@@ -4,3 +4,4 @@ Homestead.yaml
 .env
 .sass-cache
 /public/app/libraries
+/public/app/*.production-build*

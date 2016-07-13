@@ -1,10 +1,10 @@
 ({
   name: "deventureland.develop",
-  out: "deventureland.production.js",
+  out: "deventureland.production-build.js",
   generateSourceMaps: true,
   preserveLicenseComments: false,
   optimize: 'uglify2',
-  
+
   map: {
     '*': {
       'css': "libraries/require-css/css",
