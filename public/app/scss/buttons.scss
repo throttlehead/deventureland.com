@@ -3,12 +3,23 @@
 @import "variables";
 
 .btn {
-	transition: background $transition-speed $transition-ease;
+	transition: all $transition-speed $transition-ease;
+	border-radius: 0px;
 }
 
 .btn .glyphicons {
+	font-size: inherit;
 	line-height: inherit;
 }
+
+.btn .glyphicons:first-child {
+	margin-right: .2em;
+}
+
+.btn .glyphicons:only-child {
+	margin-right: 0;
+}
+
 
 .btn-clear {
 	background-color: transparent;
@@ -21,4 +32,8 @@
 
 .btn:focus {
 	outline:0;
+}
+
+.btn-primary {
+  @include button-variant($font-color-inverse, $brand-primary, $brand-primary);
 }

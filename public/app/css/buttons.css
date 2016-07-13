@@ -1,8 +1,16 @@
 .btn {
-  transition: background 250ms ease-in; }
+  transition: all 250ms ease-in;
+  border-radius: 0px; }
 
 .btn .glyphicons {
+  font-size: inherit;
   line-height: inherit; }
+
+.btn .glyphicons:first-child {
+  margin-right: .2em; }
+
+.btn .glyphicons:only-child {
+  margin-right: 0; }
 
 .btn-clear {
   background-color: transparent;
@@ -13,3 +21,24 @@
 
 .btn:focus {
   outline: 0; }
+
+.btn-primary {
+  color: #fafafa;
+  background-color: #ff6c5c;
+  border-color: #ff6c5c; }
+  .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+    color: #fafafa;
+    background-color: #ff3e29;
+    border-color: #ff351f; }
+  .btn-primary:hover {
+    color: #fafafa;
+    background-color: #ff3e29;
+    border-color: #ff351f; }
+  .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+    background-image: none; }
+  .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus {
+    background-color: #ff6c5c;
+    border-color: #ff6c5c; }
+  .btn-primary.disabled:hover, .btn-primary:disabled:hover, fieldset[disabled] .btn-primary:hover {
+    background-color: #ff6c5c;
+    border-color: #ff6c5c; }

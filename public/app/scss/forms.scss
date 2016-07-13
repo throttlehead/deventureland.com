@@ -1,0 +1,15 @@
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+@import "variables";
+
+.form-control {
+	border-radius: 0px;
+}
+
+.form-btn-row {
+	margin-top: 2em;
+
+	.btn:not(:first-child) {
+		margin-right: 1em;
+	}
+}

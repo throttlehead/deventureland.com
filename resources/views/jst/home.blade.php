@@ -22,10 +22,3 @@
 <script type="text/template" id="github_frame_t">
 	<iframe id="gitHubIframe"/>
 </script>
-
-<script type="text/template" id="contact_form_t">
-	<form>
-
-	</form>
-	<div class="hide_btn">X</div>
-</script>

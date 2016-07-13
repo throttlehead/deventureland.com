@@ -10,7 +10,7 @@ define([
 
     events: function(){
       return _.extend({}, FullScreen.prototype.events, {
-        
+        'click .cancel_btn': 'hide'
       });
     },
 

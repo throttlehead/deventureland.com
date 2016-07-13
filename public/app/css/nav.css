@@ -34,7 +34,7 @@
 .app-nav .nav-item .nav-link:hover {
   color: #ccc; }
 .app-nav .nav-item.active .nav-link {
-  color: #ededed !important;
+  color: #ff6c5c !important;
   border-color: #fff;
   text-shadow: none; }
 
