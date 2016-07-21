@@ -2,13 +2,20 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
-.tooltip-large {
+.tooltip-lg {
 	font-size: 1.25em;
 
 	.tooltip-inner {
 		max-width: 100%;
 		padding: .5rem 1rem;
 	}
+}
+
+.tooltip-lg.bs-tether-element-attached-bottom .tooltip-arrow, .tooltip.tooltip-top .tooltip-arrow {
+	bottom: -5px;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px 10px 0;
 }
 
 .tooltip-primary {

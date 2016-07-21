@@ -21,6 +21,8 @@ Route::get('/home', function () {
   return view('app');
 });
 
+Route::post('/message', 'MessagesController@send');;
+
 Route::get('/sitemap.xml', function() {
   $sitemap = App::make("sitemap");
   $sitemap->add(URL::to('/'), Carbon::now(), '1.0', 'daily');

@@ -20,7 +20,7 @@ body {
   line-height: inherit; }
 
 .btn .glyphicons:first-child {
-  margin-right: .2em; }
+  margin-right: 1rem; }
 
 .btn .glyphicons:only-child {
   margin-right: 0; }
@@ -63,11 +63,17 @@ body {
   background-color: #222222;
   border-color: #222222; }
 
-.tooltip-large {
+.tooltip-lg {
   font-size: 1.25em; }
-  .tooltip-large .tooltip-inner {
+  .tooltip-lg .tooltip-inner {
     max-width: 100%;
     padding: .5rem 1rem; }
+
+.tooltip-lg.bs-tether-element-attached-bottom .tooltip-arrow, .tooltip.tooltip-top .tooltip-arrow {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px 10px 0; }
 
 .tooltip-primary .tooltip-inner {
   background-color: #ff6c5c; }
