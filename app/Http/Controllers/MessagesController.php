@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Mail;
+use Validator;
+use Response;
+use Carbon\Carbon;
 use App\Models\Message;
 use App\Http\Requests;
+use App\Http\Controllers\RestController;
 use Illuminate\Http\Request;
 
-class MessagesController extends Controller
+class MessagesController extends RestController
 {
     /**
      * Store a newly created resource in storage.
@@ -23,6 +27,13 @@ class MessagesController extends Controller
             'message'   => 'required|filled|bail'
         ]);
 
+        if ($request->session()->has('message_last_sent')) {
+            $last_sent = Carbon::parse($request->session()->get('message_last_sent'));
+            if (Carbon::now()->subHour()->lt($last_sent)) {
+                return $this->errorResponse('You cannot send more than 1 message an hour', 403);
+            }          
+        }
+
         $message = Message::create($request->all());
 
         $data = $message->toArray();
@@ -34,5 +45,9 @@ class MessagesController extends Controller
             $m->from($data['email'], $data['name']);
             $m->to('throttleheadwebdev@gmail.com', 'Jacob Smits')->subject($subject);
         });
+
+        $request->session()->put('message_last_sent', Carbon::now()->toDateTimeString());
+
+        return Response::json($message, 200);
     }
 }

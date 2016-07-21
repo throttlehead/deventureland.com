@@ -13,15 +13,17 @@ use Carbon\Carbon;
 |
 */
 
-Route::get('/', function () {
-  return view('app');
-});
+Route::group(['middleware' => ['web']], function () {
+	Route::get('/', function () {
+	  return view('app');
+	});
 
-Route::get('/home', function () {
-  return view('app');
-});
+	Route::get('/home', function () {
+	  return view('app');
+	});
 
-Route::post('/message', 'MessagesController@send');;
+	Route::post('/message', 'MessagesController@send');
+});
 
 Route::get('/sitemap.xml', function() {
   $sitemap = App::make("sitemap");
