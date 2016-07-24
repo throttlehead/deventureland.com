@@ -6,14 +6,7 @@ define([
   'bootstrap',
   'css',
   'router',
-  'view.controller',  
-  'css!/app/css/glyphicons',
-  'css!/app/css/social',   
-  'css!/app/libraries/animate.css/animate.min',
-  'css!/app/libraries/bootstrap/dist/css/bootstrap.min',
-  'css!/app/libraries/slick-carousel/slick/slick',
-  'css!/app/libraries/slick-carousel/slick/slick-theme',
-  'css!/app/css/app'
+  'view.controller'
 ], function($, _, Backbone, tether, bootstrap, css, Router, ViewController){
 
   var initialize = function() {

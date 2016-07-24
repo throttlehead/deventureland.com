@@ -16,6 +16,30 @@ body {
 
 }
 
+.loader {
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    background: #1d150c;
+
+    .svg {
+    	position: absolute;
+	    top: 50%;
+	    left: 50%;
+    }
+
+    img {
+    	position: relative;
+	    top: -40px;
+	    left: -40px;
+    }
+}
+
+
+
 @media only screen and (max-device-width: 1024px) {
 	html {
 		font-size: 25px;

@@ -44,6 +44,7 @@ define([
     	this.initBackStrech();
     	this.initTextRotator();
       this.initHoodLatch();
+      this.hideLoader();
     },
     
 
