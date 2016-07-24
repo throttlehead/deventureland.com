@@ -23,7 +23,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 	.navbar-brand {
 		width: 255px;
-    margin-top: 10px;
+	    margin-top: 10px;
 
 		img {
 			width: 100%;
@@ -44,8 +44,8 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 	.nav-item .nav-link {
 		color: $nav-link-color;
 		cursor: pointer;
-	  border-bottom: 3px solid transparent;
-	  text-shadow: 1px 1px rgba(0, 0, 0, .2);
+		border-bottom: 3px solid transparent;
+		text-shadow: 1px 1px rgba(0, 0, 0, .2);
 		line-height: 4rem;
 		font-size: 1.2rem;
 		padding: 0 .8rem;
@@ -66,19 +66,19 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 	.nav-item.active .nav-link {
 		color: $nav-link-active-color !important;
 		border-color: #fff;
-	  text-shadow: none;
+		text-shadow: none;
 	}
 }
 
 .app-nav.nav-scrolled {
 	.navbar {
 		background: $nav-bg-transparancy;
-    padding: .0 1rem;
+		padding: .0 1rem;
 	}
 
 	.nav-item .nav-link {
 		color: $nav-link-color-scrolled;
-	  text-shadow: none;
+		text-shadow: none;
 		margin-top: 3px;
 	}
 
@@ -108,7 +108,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 		.navbar-brand {
 			width: 455px;
-	    margin: .5em 0 0 0;
+			margin: .5em 0 0 0;
 		}
 
 		.nav-toggle-btn {
@@ -139,7 +139,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 			.nav-link {
 				font-size: 2em;
-		    text-align: center;
+				text-align: center;
 				line-height: 3em;
 				border-bottom: none !important;
 
@@ -157,7 +157,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 	.app-nav.collapse-shown .navbar {
 		height: 100%;
-    overflow: scroll;
+		overflow: scroll;
 	}
 }
 

@@ -53,15 +53,15 @@ body {
   outline: 0; }
 
 .btn-primary {
-  color: #eee;
+  color: #fefefe;
   background-color: #ff6c5c;
   border-color: #ff6c5c; }
   .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
-    color: #eee;
+    color: #fefefe;
     background-color: #ff3e29;
     border-color: #ff351f; }
   .btn-primary:hover {
-    color: #eee;
+    color: #fefefe;
     background-color: #ff3e29;
     border-color: #ff351f; }
   .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
@@ -95,7 +95,7 @@ body {
 .tooltip-primary .tooltip-inner {
   background-color: #ff6c5c; }
   .tooltip-primary .tooltip-inner a {
-    color: #eee !important;
+    color: #fefefe !important;
     text-decoration: none !important; }
 
 .tooltip-primary.bs-tether-element-attached-bottom .tooltip-arrow, .tooltip.tooltip-top .tooltip-arrow {
@@ -127,7 +127,7 @@ body {
   background-color: #333;
   visibility: hidden;
   opacity: 0;
-  color: #eee;
+  color: #fefefe;
   transition: all 250ms ease-in; }
   .full_screen .hide_btn {
     font-size: 2em;
@@ -137,7 +137,7 @@ body {
     right: 0;
     padding: 1.5rem 2rem;
     cursor: pointer;
-    color: #eee;
+    color: #fefefe;
     transition: all 250ms ease-in; }
   .full_screen .hide_btn:hover {
     background: rgba(255, 255, 255, 0.1); }
@@ -168,7 +168,7 @@ body {
   .app-nav .nav-toggle-btn .glyphicons {
     font-size: 1.5em; }
 .app-nav .nav-item .nav-link {
-  color: #eee;
+  color: #fefefe;
   cursor: pointer;
   border-bottom: 3px solid transparent;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
