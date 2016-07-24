@@ -43,7 +43,7 @@ define([
 
 
     hideLoader: function() {
-      $('#appLoader').stop().fadeOut(250);
+      $('#appLoader').stop().fadeOut(400);
     }
 
   });
