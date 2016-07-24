@@ -15,6 +15,7 @@
     jquery: "libraries/jquery/dist/jquery",
     underscore: "libraries/underscore/underscore",
     backbone: "libraries/backbone/backbone",
+    tether: "libraries/tether/dist/js/tether",
     bootstrap: "libraries/bootstrap/dist/js/bootstrap",
     Waypoint: "libraries/waypoints/lib/jquery.waypoints",
     slick: "libraries/slick-carousel/slick/slick",
@@ -34,6 +35,10 @@
       exports: "jQuery"
     },
 
+    "tether": {
+      deps: ["jquery"],
+    },
+    
     "bootstrap": {
       deps: ["jquery"],
     },
