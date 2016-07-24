@@ -3,6 +3,7 @@ require.config({
     jquery: "libraries/jquery/dist/jquery",
     underscore: "libraries/underscore/underscore",
     backbone: "libraries/backbone/backbone",
+    tether: "libraries/tether/dist/js/tether",
     bootstrap: "libraries/bootstrap/dist/js/bootstrap",
     css: "libraries/require-css/css",
     Waypoint: "libraries/waypoints/lib/jquery.waypoints",
@@ -13,6 +14,9 @@ require.config({
     EasleJS: "libraries/EaselJS/lib/easeljs-0.8.1.combined",
     TweenJS: "libraries/TweenJS/lib/tweenjs-0.6.1.combined",
     PreloadJS: "libraries/PreloadJS/lib/preloadjs-0.6.1.combined",
+    validate: "libraries/validatejs/validate",
+    serializeJSON: "libraries/jquery.serializeJSON/jquery.serializejson",
+    notify: "libraries/remarkable-bootstrap-notify/bootstrap-notify"
   },
 
   shim: {
@@ -20,8 +24,12 @@ require.config({
       exports: "jQuery"
     },
 
-    "bootstrap": {
+    "tether": {
       deps: ["jquery"],
+    },
+
+    "bootstrap": {
+      deps: ["jquery", "tether"],
     },
 
     "underscore": {
@@ -77,12 +85,32 @@ require.config({
     "PreloadJS": {
       deps: [],
       exports: "PreloadJS"
+    },
+
+    "validate": {
+      deps: [],
+      exports: "validate"
+    },
+
+    "serializeJSON": {
+      deps: ['jquery'],
+      exports: "serializeJSON"
+    },
+
+    'notify': {
+      deps: ['bootstrap'],
+      exports: 'notify'
     }
+        
   }  
+});
+
+require(['tether'], function (Tether) {
+  window.Tether = Tether;
 });
 
 require([
   "app",
-], function(App){
+], function(App, tether){
   App.initialize();
 });

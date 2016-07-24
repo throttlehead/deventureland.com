@@ -24,8 +24,16 @@ define([
 
 
     hide: function() {
-      console.log('hello')
+      if (typeof this.onHide === 'function') {
+        this.onHide();
+      }
+
       this.$el.removeClass('show');
+    },
+
+
+    onHide: function() {
+      
     }
 
   });

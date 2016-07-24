@@ -2,8 +2,7 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
-#contactForm {
-	form {
-		margin-top: 3em;
-	}
+.glyphicons {
+  font-size: inherit;
+  line-height: inherit;	
 }

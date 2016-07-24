@@ -2,11 +2,11 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
-.glyphicons {
-	font-size: 1rem;
-	padding-right: .5rem;
+.card {
+	font-size: 1.1em;
 }
 
-.btn .glyphicons:only-child {
-	padding-right: 0px;
+.card-dark {
+	background-color: #222222;
+	border-color: #222222;
 }

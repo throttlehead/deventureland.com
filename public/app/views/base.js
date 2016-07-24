@@ -34,6 +34,16 @@ define([
       this.stopListening();
       this.remove();
       this.unbind();
+    },
+
+
+    showLoader: function() {
+      $('#appLoader').stop().fadeIn(250);
+    },
+
+
+    hideLoader: function() {
+      $('#appLoader').stop().fadeOut(400);
     }
 
   });

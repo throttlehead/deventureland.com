@@ -13,19 +13,12 @@
 			</div>
 			<div class="inner">
 				<h1>Hello, I'm Jacob</h1>
-				<div class="slide-rotator">Full Stack Developer, Motorcyclist, Musician (sorta)</div>
+				<div class="slide-rotator">Full Stack Developer, Motorcyclist, Sorta Musician</div>
 			</div>
 		</div>
 	</div>
-</script>
-
-<script type="text/template" id="github_frame_t">
-	<iframe id="gitHubIframe"/>
-</script>
-
-<script type="text/template" id="contact_form_t">
-	<form>
-
-	</form>
-	<div class="hide_btn">X</div>
+	<div id="hoodLatch" data-toggle="tooltip" data-title="<a href='https://github.com/throttlehead/deventureland.com' target='_blank'><span class='glyphicons glyphicons-settings'></span>&nbsp;&nbsp;Take a look under the hood</a>"></div>
+	<div id="hoodLatchHtml" style="display: none">
+		<div class="tooltip tooltip-primary tooltip-lg" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner animated shake" id="hoodLatchTooltip"></div></div>
+	</div>	
 </script>

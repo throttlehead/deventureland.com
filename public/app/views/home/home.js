@@ -5,18 +5,22 @@ define([
   "backstretch",
   "textrotator",
   "Waypoint",  
+  "PreloadJS",
   "views/base",
-  "views/home/github.frame"
-], function($, _, Backbone, backstretch, textrotator, Waypoint, BaseView, GitHubFrame){
+], function($, _, Backbone, backstretch, textrotator, Waypoint, PreloadJS, BaseView){
 
   var Home = BaseView.extend({
     className: "home",
 
     waypoints: {},
 
-    events: {
-      'click .hood_latch': 'popHood'   
-    },
+    events: {},
+
+    slide_images: [
+      "/img/slideshow/slide1.jpg", 
+      "/img/slideshow/slide2.jpg", 
+      "/img/slideshow/slide3.jpg"
+    ],
 
 
     initialize: function(options) {
@@ -27,11 +31,8 @@ define([
 
 
     render: function() {
-    	var template = _.template( window.templates.find("#home_t").html(), {});
+    	var template = _.template( window.templates.find("#home_t").html());
     	this.$el.html( template );
-
-      this.$el.find('#engineBay').append(this.subviews.engine_frame.render().el);
-
     	return this;
     },
 
@@ -42,9 +43,7 @@ define([
     },
 
 
-    initSubviews: function() {
-      this.subviews.engine_frame = new GitHubFrame();
-    },
+    initSubviews: function() {},
 
 
     viewRendered: function() {
@@ -52,6 +51,25 @@ define([
     	this.initBackStrech();
     	this.initTextRotator();
       this.initHoodLatch();
+      this.preloadImages();
+    },
+
+
+    preloadImages: function() {
+      var queue = new createjs.LoadQueue(true);
+
+      queue.on("complete", this.onLoadComplete, this);
+
+      _.each(this.slide_images, function(image) {
+        queue.loadFile(image);
+      });
+
+      queue.load();
+    },
+
+
+    onLoadComplete: function() {
+      this.hideLoader();
     },
     
 
@@ -88,12 +106,6 @@ define([
 			});
     },
 
-
-    initContactForm: function() {
-      
-    },
-
-
     initHoodLatch: function() {
       var view = this;
 
@@ -104,14 +116,20 @@ define([
 
 
     showHoodLatch: function() {
+      var hood_latch = this.$el.find('#hoodLatch');
+      var html = this.$el.find('#hoodLatchHtml').html();
+      var view = this;
 
-    },
+      hood_latch.tooltip({
+        placement: "top",
+        template: html,
+        html: true,
+        offset: "10px 0",
+        trigger: "manual"
+      });
 
-
-    popHood: function() {
-      this.subviews.engine_frame.load(window.app.data.github_link);
+      hood_latch.tooltip("show");
     }
-
 
   });
 

@@ -16,9 +16,9 @@
   padding: 0 .8rem;
   display: none; }
   .app-nav .nav-toggle-btn .glyphicons {
-    font-size: 1.5rem; }
+    font-size: 1.5em; }
 .app-nav .nav-item .nav-link {
-  color: #fafafa;
+  color: #fefefe;
   cursor: pointer;
   border-bottom: 3px solid transparent;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
@@ -28,13 +28,12 @@
   transition: all 250ms ease-in; }
   .app-nav .nav-item .nav-link .glyphicons {
     line-height: inherit;
-    margin-right: 5px;
-    font-size: 20px;
+    margin-right: .4em;
     top: 0px; }
 .app-nav .nav-item .nav-link:hover {
-  color: #ccc; }
+  color: #ff6c5c; }
 .app-nav .nav-item.active .nav-link {
-  color: #ededed !important;
+  color: #ff6c5c !important;
   border-color: #fff;
   text-shadow: none; }
 

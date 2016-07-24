@@ -2,17 +2,12 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'tether',
   'bootstrap',
   'css',
   'router',
-  'view.controller',  
-  'css!/app/css/glyphicons',
-  'css!/app/css/social',    
-  'css!/app/libraries/bootstrap/dist/css/bootstrap.min',
-  'css!/app/libraries/slick-carousel/slick/slick',
-  'css!/app/libraries/slick-carousel/slick/slick-theme',
-  'css!/app/css/app'
-], function($, _, Backbone, bootstrap, css, Router, ViewController){
+  'view.controller'
+], function($, _, Backbone, tether, bootstrap, css, Router, ViewController){
 
   var initialize = function() {
     if (typeof window.app !== "object") {
