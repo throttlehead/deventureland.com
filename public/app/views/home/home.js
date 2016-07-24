@@ -5,8 +5,9 @@ define([
   "backstretch",
   "textrotator",
   "Waypoint",  
+  "PreloadJS",
   "views/base",
-], function($, _, Backbone, backstretch, textrotator, Waypoint, BaseView){
+], function($, _, Backbone, backstretch, textrotator, Waypoint, PreloadJS, BaseView){
 
   var Home = BaseView.extend({
     className: "home",
@@ -14,6 +15,12 @@ define([
     waypoints: {},
 
     events: {},
+
+    slide_images: [
+      "/img/slideshow/slide1.jpg", 
+      "/img/slideshow/slide2.jpg", 
+      "/img/slideshow/slide3.jpg"
+    ],
 
 
     initialize: function(options) {
@@ -44,6 +51,24 @@ define([
     	this.initBackStrech();
     	this.initTextRotator();
       this.initHoodLatch();
+      this.preloadImages();
+    },
+
+
+    preloadImages: function() {
+      var queue = new createjs.LoadQueue(true);
+
+      queue.on("complete", this.onLoadComplete, this);
+
+      _.each(this.slide_images, function(image) {
+        queue.loadFile(image);
+      });
+
+      queue.load();
+    },
+
+
+    onLoadComplete: function() {
       this.hideLoader();
     },
     
