@@ -2,7 +2,7 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
-$full-screen-bg: #333;
+$full-screen-bg: $theme-background;
 
 .full_screen {
 	position: fixed;
