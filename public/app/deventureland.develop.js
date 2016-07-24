@@ -14,6 +14,7 @@ require.config({
     EasleJS: "libraries/EaselJS/lib/easeljs-0.8.1.combined",
     TweenJS: "libraries/TweenJS/lib/tweenjs-0.6.1.combined",
     PreloadJS: "libraries/PreloadJS/lib/preloadjs-0.6.1.combined",
+    validate: "libraries/validatejs/validate"
   },
 
   shim: {
@@ -82,6 +83,11 @@ require.config({
     "PreloadJS": {
       deps: [],
       exports: "PreloadJS"
+    },
+
+    "validate": {
+      deps: [],
+      exports: "validate"
     }
   }  
 });

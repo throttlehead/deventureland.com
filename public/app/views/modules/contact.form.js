@@ -1,10 +1,11 @@
 define([
   "jquery",
   "underscore",
-  "backbone",  
+  "backbone",
+  "validate",
   "views/components/full.screen",
   "models/message"
-], function($, _, Backbone, FullScreen, MessageModel){
+], function($, _, Backbone, validate, FullScreen, MessageModel){
 
   var ContactForm = FullScreen.extend({
     id: "contactForm",
