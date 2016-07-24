@@ -113,6 +113,16 @@ define([
     onSaveError: function(model, response) {
       this.hideLoader();
       this.hide();
+    },
+
+
+    onHide: function() {
+      var self = this;
+      
+      setTimeout(function() {
+        self.$el.find('.alert').remove();
+        self.$el.find('input, textarea').val('');
+      }, 1000)
     }
 
 
