@@ -32,37 +32,32 @@ define([
     template: '<div data-notify="container" class="col-xs-11 col-sm-11 col-md-8 alert alert-{0} notify_alert" role="alert">'+
       '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">x</button>'+
       '<span data-notify="icon"></span>'+
-      '<strong data-notify="title">{1}</strong>&nbsp;'+
       '<span data-notify="message">{2}</span>'+
       '<a href="{3}" target="{4}" data-notify="url"></a>'+
     '</div>',
 
 
-    success: function( title, message, options, settings ) {
-      this.showNotification( 'success', title, message, options, settings );
+    success: function( message, options, settings ) {
+      this.showNotification( 'success', message, options, settings );
     },
 
 
-    warning: function( title, message, options, settings ) {
-      this.showNotification( 'warning', title, message, options, settings );
+    warning: function( message, options, settings ) {
+      this.showNotification( 'warning', message, options, settings );
     },
 
 
-    error: function( title, message, options, settings ) {
-      this.showNotification( 'danger', title, message, options, settings );
+    error: function( message, options, settings ) {
+      this.showNotification( 'danger', message, options, settings );
     },
 
 
-    info: function( title, message, options, settings ) { 
-      this.showNotification( 'info', title, message, options, settings );
+    info: function( message, options, settings ) { 
+      this.showNotification( 'info', message, options, settings );
     },
 
 
-    showNotification: function( type, title, message, options, settings ) {
-      if ( typeof title !== 'string' ) {
-        title = '';
-      }      
-
+    showNotification: function( type, message, options, settings ) {
       if ( typeof message !== 'string' ) {
         message = '';
       }
@@ -70,7 +65,6 @@ define([
       var _options = _.clone( this.options );
       _.extend( _options, options );
 
-      _options.title = title;
       _options.message = message;
 
       var _settings = _.clone( this.settings );

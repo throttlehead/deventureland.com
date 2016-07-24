@@ -60,7 +60,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 	}
 
 	.nav-item .nav-link:hover {
-	  color: #ccc;
+	  color: $brand-primary;
 	}
 
 	.nav-item.active .nav-link {

@@ -10,8 +10,6 @@ define([
 
   	urlRoot: '/message',
 
-  	success_msg: 'Your message has been sent. I\'ll get back to you as soon as possible!',
-
 
   	initialize: function() {
   		this.initListeners();
@@ -25,12 +23,12 @@ define([
 
 
   	showSuccess: function(model, response) {
-  		Notify.error(this.success_msg, null);
+  		Notify.success('Your message has been sent! I\'ll get back to you as soon as possible.');
   	},
 
 
   	showError: function(model, response) {
-  		Notify.error(response.responseJSON.error, null);
+  		Notify.error(response.responseJSON.error);
   	}
 
   });

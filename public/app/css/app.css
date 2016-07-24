@@ -29,6 +29,38 @@ body {
 @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
   html {
     font-size: 15px; } }
+.alert .close {
+  top: -2px;
+  position: relative; }
+
+.alert-info {
+  background-color: #e1f9ff;
+  border-color: #78d5ef;
+  color: #167e9c; }
+  .alert-info .alert .alert-icon {
+    color: #167e9c; }
+
+.alert-danger {
+  background-color: #ffe2d9;
+  border-color: #ffa084;
+  color: #e6402f; }
+  .alert-danger .alert .alert-icon {
+    color: #e6402f; }
+
+.alert-warning {
+  background-color: #fff8d4;
+  border-color: #e8d27d;
+  color: #d4a903; }
+  .alert-warning .alert .alert-icon {
+    color: #d4a903; }
+
+.alert-success {
+  background-color: #dfffd5;
+  border-color: #9fdc8b;
+  color: #17a64b; }
+  .alert-success .alert .alert-icon {
+    color: #17a64b; }
+
 .btn {
   transition: all 250ms ease-in; }
 
@@ -182,7 +214,7 @@ body {
     margin-right: .4em;
     top: 0px; }
 .app-nav .nav-item .nav-link:hover {
-  color: #ccc; }
+  color: #ff6c5c; }
 .app-nav .nav-item.active .nav-link {
   color: #ff6c5c !important;
   border-color: #fff;
