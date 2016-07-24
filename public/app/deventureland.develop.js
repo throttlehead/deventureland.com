@@ -14,7 +14,9 @@ require.config({
     EasleJS: "libraries/EaselJS/lib/easeljs-0.8.1.combined",
     TweenJS: "libraries/TweenJS/lib/tweenjs-0.6.1.combined",
     PreloadJS: "libraries/PreloadJS/lib/preloadjs-0.6.1.combined",
-    validate: "libraries/validatejs/validate"
+    validate: "libraries/validatejs/validate",
+    serializeJSON: "libraries/jquery.serializeJSON/jquery.serializejson",
+    notify: "libraries/remarkable-bootstrap-notify/bootstrap-notify"
   },
 
   shim: {
@@ -88,7 +90,18 @@ require.config({
     "validate": {
       deps: [],
       exports: "validate"
+    },
+
+    "serializeJSON": {
+      deps: ['jquery'],
+      exports: "serializeJSON"
+    },
+
+    'notify': {
+      deps: ['bootstrap'],
+      exports: 'notify'
     }
+        
   }  
 });
 

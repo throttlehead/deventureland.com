@@ -101,6 +101,9 @@ body {
 .tooltip-primary.bs-tether-element-attached-bottom .tooltip-arrow, .tooltip.tooltip-top .tooltip-arrow {
   border-top-color: #ff6c5c; }
 
+.form-group .alert {
+  margin: 1em 0; }
+
 .form-btn-row {
   margin-top: 2em; }
   .form-btn-row .btn:not(:first-child) {
@@ -112,8 +115,6 @@ body {
 
 #contactForm form {
   margin-top: 3em; }
-#contactForm .form-control {
-  margin-bottom: 2em; }
 
 .full_screen {
   position: fixed;
@@ -247,6 +248,9 @@ body {
     line-height: 2.5em; }
     .app-nav .nav-toggle-btn .glyphicons {
       font-size: 2em; } }
+.notify_alert {
+  z-index: 10001; }
+
 .home-slide {
   height: 960px;
   background: #3e3529 !important; }

@@ -4,7 +4,7 @@
 			<div class="text-center">
 				<div class="card-block">Send me a brief message and I'll get back to you as soon as possible!</div>
 			</div>
-			<form>
+			<form name="message_form" id="messageForm">
 			  <div class="form-group">
 			    <label for="contactName"><h5>Name</h5></label>
 			    <input type="text" class="form-control form-control-lg" id="contactName" placeholder="Jon Doe" name="name">

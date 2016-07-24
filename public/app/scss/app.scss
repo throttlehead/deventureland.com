@@ -39,7 +39,6 @@ body {
 }
 
 
-
 @media only screen and (max-device-width: 1024px) {
 	html {
 		font-size: 25px;
@@ -52,7 +51,6 @@ body {
 	}
 }
 
-
 @import "buttons";
 @import "cards";
 @import "tooltips";
@@ -62,4 +60,5 @@ body {
 @import "components";
 @import "nav";
 @import "footer";
+@import "plugins";
 @import "home";

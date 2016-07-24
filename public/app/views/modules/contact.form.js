@@ -3,9 +3,10 @@ define([
   "underscore",
   "backbone",
   "validate",
+  "serializeJSON",
   "views/components/full.screen",
   "models/message"
-], function($, _, Backbone, validate, FullScreen, MessageModel){
+], function($, _, Backbone, validate, serializeJSON, FullScreen, MessageModel){
 
   var ContactForm = FullScreen.extend({
     id: "contactForm",
@@ -13,7 +14,8 @@ define([
     events: function(){
       return _.extend({}, FullScreen.prototype.events, {
         'click .cancel_btn': 'hide',
-        'click .submit_btn': 'submit'
+        'click .submit_btn': 'submit',
+        'submit #messageForm': 'onSubmit'
       });
     },
 
@@ -37,19 +39,80 @@ define([
     },
 
 
-    initListeners: function() {
-
-    },
+    initListeners: function() {},
 
 
     submit: function() {
-      if (!this.validate()) { return; }
-      
+      return this.validate();      
     },
 
 
     validate: function() {
-      return true;
+      this.validator = new FormValidator('message_form', [{
+        name: 'name',
+        rules: 'required|max_length[255]|min_length[1]'
+      }, {
+        name: 'email',
+        rules: 'required|max_length[255]|min_length[1]|valid_email'
+      }, {
+        name: 'message',
+        rules: 'required|min_length[1]'
+      }], $.proxy(this.handleValidation, this));
+
+      return this.$el.find('#messageForm').submit();
+    },
+
+
+    handleValidation(errors, e) {
+      e.preventDefault();
+
+      if (errors.length <= 0) {
+        return this.formValid();
+      }
+
+      return this.showErrors(errors);
+    },
+
+
+    formValid: function() {
+      this.save();
+    },
+
+
+    showErrors: function(errors) {
+      _.each(errors, function(error) {
+        $(error.element).parent().append('<div class="alert alert-danger">'+error.message+'</div>');
+
+        $(error.element).on('keyup', function(e) {
+          $(e.currentTarget).siblings('.alert').fadeOut(250, function() {
+            $(this).remove();
+          });
+        });
+      });
+    },
+
+
+    save: function() {
+      this.showLoader();
+
+      var data = this.$el.find('#messageForm').serializeJSON({parseBooleans: true, parseNumbers: true});
+
+      this.model.save(data, {
+        success: $.proxy(this.onSaveSuccess, this),
+        error: $.proxy(this.onSaveError, this),
+      });
+    },
+
+
+    onSaveSuccess: function(model) {
+      this.hideLoader();
+      this.hide();
+    },
+
+
+    onSaveError: function(model, response) {
+      this.hideLoader();
+      this.hide();
     }
 
 
