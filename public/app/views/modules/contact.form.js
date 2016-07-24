@@ -3,20 +3,23 @@ define([
   "underscore",
   "backbone",  
   "views/components/full.screen",
-], function($, _, Backbone, FullScreen){
+  "models/message"
+], function($, _, Backbone, FullScreen, MessageModel){
 
   var ContactForm = FullScreen.extend({
     id: "contactForm",
 
     events: function(){
       return _.extend({}, FullScreen.prototype.events, {
-        'click .cancel_btn': 'hide'
+        'click .cancel_btn': 'hide',
+        'click .submit_btn': 'submit'
       });
     },
 
 
     initialize: function(options) {
       FullScreen.prototype.initialize.apply(this, arguments);
+      this.initModel();
       this.initListeners();
     },
 
@@ -28,8 +31,24 @@ define([
     },
 
 
+    initModel: function() {
+      this.model = new MessageModel();
+    },
+
+
     initListeners: function() {
 
+    },
+
+
+    submit: function() {
+      if (!this.validate()) { return; }
+      
+    },
+
+
+    validate: function() {
+      return true;
     }
 
 
