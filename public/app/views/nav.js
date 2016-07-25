@@ -23,6 +23,8 @@ define([
       '/blog'
     ],
 
+    subviews: {},
+
   	
     initialize: function(options) {
       BaseView.prototype.initialize.apply(this, arguments);

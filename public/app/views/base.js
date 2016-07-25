@@ -7,9 +7,6 @@ define([
   var BaseView = Backbone.View.extend({
     className: "home",
 
-    subviews: {},
-
-
     initialize: function(options) {
       if ( typeof this.options == "undefined" ) { this.options = {}; }
       _.extend(this.options, options);

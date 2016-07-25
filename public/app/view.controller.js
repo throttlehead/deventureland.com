@@ -72,8 +72,8 @@ define([
 
 
     switchView: function(newView, options) {
-      if (typeof this.app_view === "object" && typeof this.app_view.sub_views === "object") {
-        this.sub_view.closeViews();
+      if (typeof this.sub_view === "object") {
+        this.sub_view.close();
       }
 
       this.renderView(newView, options);

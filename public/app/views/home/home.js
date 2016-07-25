@@ -46,6 +46,11 @@ define([
     initSubviews: function() {},
 
 
+    onClose: function() {
+      this.hood_latch.tooltip('dispose');
+    },
+
+
     viewRendered: function() {
     	this.setSlideCss();
       this.onLoadComplete();
@@ -131,6 +136,7 @@ define([
       });
 
       hood_latch.tooltip("show");
+      this.hood_latch = hood_latch;
     }
 
   });
