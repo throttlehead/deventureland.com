@@ -63,7 +63,7 @@ define([
     },
 
 
-    handleValidation(errors, e) {
+    handleValidation: function(errors, e) {
       e.preventDefault();
 
       if (errors.length <= 0) {
