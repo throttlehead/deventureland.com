@@ -3,6 +3,7 @@
 Homestead.yaml
 .env
 .sass-cache
+/public/app/css
 /public/app/libraries
 /public/app/*.production-build*
 *.sh*
