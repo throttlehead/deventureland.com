@@ -28,9 +28,5 @@ Route::group(['middleware' => ['web']], function () {
 Route::get('/sitemap.xml', function() {
   $sitemap = App::make("sitemap");
   $sitemap->add(URL::to('/'), Carbon::now(), '1.0', 'daily');
-  $sitemap->add(URL::to('blog'), Carbon::now(), '1.0', 'daily');
-  $sitemap->add(URL::to('projects'), Carbon::now(), '1.0', 'daily');
-  $sitemap->add(URL::to('home'), Carbon::now(), '1.0', 'daily');
-
   return $sitemap->render('xml');
 });
