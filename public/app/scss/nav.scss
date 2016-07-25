@@ -12,7 +12,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 	.navbar {
 		background: transparent;
 		padding: 0 1em;
-    z-index: 100003;
+    z-index: 10003;
 
 		transition: all $transition-speed $transition-ease;
 	}
