@@ -1,56 +1,7 @@
 @import "../libraries/bootstrap/scss/variables";
 @import "../libraries/bootstrap/scss/mixins";
 @import "_variables";
-
-html {
-	font-size: 15px;
-	color: $font-color;
-}
-
-body {
-	background: $body-bg-color;
-	font-family: 'Lato', sans-serif;
-}
-
-.app {
-
-}
-
-.loader {
-	position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 10000;
-    background: $theme-background;
-
-    .svg {
-    	position: absolute;
-	    top: 50%;
-	    left: 50%;
-    }
-
-    img {
-    	position: relative;
-	    top: -40px;
-	    left: -40px;
-    }
-}
-
-
-@media only screen and (max-device-width: 1024px) {
-	html {
-		font-size: 25px;
-	}
-}
-
-@media only screen and (max-device-width: 1024px) and (orientation : landscape) {
-	html {
-		font-size: 15px;
-	}
-}
-
+@import "_base";
 @import "_alerts";
 @import "_buttons";
 @import "_cards";

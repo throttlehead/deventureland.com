@@ -2,7 +2,7 @@
 @import "../libraries/bootstrap/scss/mixins";
 @import "variables";
 
-$nav-open-color: #333;
+$nav-open-color: $black;
 $nav-link-color: $font-color-inverse;
 $nav-link-active-color: $brand-primary;
 $nav-link-color-scrolled: #fafafa;
@@ -12,6 +12,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 	.navbar {
 		background: transparent;
 		padding: 0 1em;
+    z-index: 100003;
 
 		transition: all $transition-speed $transition-ease;
 	}

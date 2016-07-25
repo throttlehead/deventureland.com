@@ -5,6 +5,7 @@ $font-color-inverse: #fefefe;
 
 $brand-primary: #ff6c5c;
 $theme-background: #3e3529;
+$theme-background-dark: darken($theme-background, 10%);
 
 $transition-speed: 250ms;
 $transition-ease: ease-in;
@@ -14,3 +15,5 @@ $text-info-red: #e6402f;
 $text-info-yellow: #d4a903;
 $text-info-green: #17a64b;
 $text-info-purple: #9b59b6;
+
+$black: #333;

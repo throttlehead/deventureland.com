@@ -6,7 +6,8 @@
 	font-size: 1.1em;
 }
 
-.card-dark {
-	background-color: #222222;
-	border-color: #222222;
+.card-brand {
+	background-color: $theme-background-dark;
+	border-color: $theme-background-dark;
+  color: $brand-primary;
 }
