@@ -7,6 +7,6 @@
   line-height: inherit;	
 }
 
-h1 .glyphicons:first-child {
-  margin-right: .5em
+h1 .glyphicons:first-child:not(:only-child) {
+  margin-right: .25em
 }
