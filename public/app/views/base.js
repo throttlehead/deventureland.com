@@ -34,12 +34,12 @@ define([
 
 
     showLoader: function() {
-      $('#appLoader').stop().fadeIn(250);
+      $('#appLoader').stop().show();
     },
 
 
     hideLoader: function() {
-      $('#appLoader').stop().fadeOut(400);
+      $('#appLoader').stop().delay(500).fadeOut(400);
     }
 
   });

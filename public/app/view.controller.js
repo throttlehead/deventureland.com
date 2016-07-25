@@ -2,12 +2,13 @@ define([
   "jquery",
   "underscore",
   "backbone",
+  "views/base",
   "views/nav",
   "views/home/home",
   "views/404",
-], function($, _, Backbone, Nav, Home, NotFound){
+], function($, _, Backbone, BaseView, Nav, Home, NotFound){
 
-  var Controller = Backbone.View.extend({
+  var Controller = BaseView.extend({
     className: "view_controller",
 
     template_hash: {
@@ -72,6 +73,8 @@ define([
 
 
     switchView: function(newView, options) {
+      this.showLoader();
+
       if (typeof this.sub_view === "object") {
         this.sub_view.close();
       }
@@ -95,7 +98,7 @@ define([
       var resize_countdown = null;
 
       $( window ).resize(function(e) {
-        clearTimeout( resize_countdown );        
+        clearTimeout( resize_countdown );
 
         resize_countdown = setTimeout(function() {
           self.trigger( 'resize', {

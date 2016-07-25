@@ -17,10 +17,11 @@ define([
 
     events: {},
 
-    slide_images: [
+    preload: [
       "/img/slideshow/slide1.jpg", 
       "/img/slideshow/slide2.jpg", 
-      "/img/slideshow/slide3.jpg"
+      "/img/slideshow/slide3.jpg",
+      "img/avatars/me.jpg"
     ],
 
 
@@ -54,7 +55,7 @@ define([
 
     viewRendered: function() {
     	this.setSlideCss();
-      this.onLoadComplete();
+      this.preloadImages();
     },
 
 
