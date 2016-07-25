@@ -2,3 +2,4 @@
 @include('jst.home')
 @include('jst.modules')
 @include('jst.components')
+@include('jst.errors')

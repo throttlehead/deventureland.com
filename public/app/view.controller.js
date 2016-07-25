@@ -30,7 +30,7 @@ define([
 
 
     render: function() {
-      this.$el.html( this.subviews.nav.render().el ).append('<div class="view"></div>');
+      this.$el.html( this.subviews.nav.render().el ).append('<div class="view_container"></div>');
       return this;
     },
 
@@ -56,7 +56,7 @@ define([
       }
 
       this.sub_view = new SubView.view(options);
-      this.$el.find('.view').html(this.sub_view.render().el);
+      this.$el.find('.view_container').html(this.sub_view.render().el);
 
       this.updatePageData(SubView.title);
       this.updateNavigation();

@@ -19,6 +19,10 @@ define([
       'click #contact': 'showContactForm',
     },
 
+    sub_routes: [
+      '/blog'
+    ],
+
   	
     initialize: function(options) {
       BaseView.prototype.initialize.apply(this, arguments);
@@ -79,7 +83,7 @@ define([
     		}
     	});
 
-      if (path.length > 1) {
+      if (_.indexOf(this.sub_routes, path) > -1) {
         this.$el.addClass('sub-nav');
       } else {
         this.$el.removeClass('sub-nav');

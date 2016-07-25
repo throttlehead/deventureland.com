@@ -9,7 +9,9 @@ define([
     routes: {
     	''           : 'showHome',
       'home'       : 'showHome',
+      'login'      : 'showLogin',
 
+      '404':          'showNotFound',
       '*nomatch': 		'showNotFound'
     },
 
@@ -62,6 +64,11 @@ define([
 
     showNotFound: function() {
     	this.switchView('not_found');
+    },
+
+
+    showLogin: function() {
+
     }
 
   });
