@@ -4,7 +4,7 @@
 
 .home-slide {
 	height: 960px;
-    background: $theme-background !important;
+	background: $theme-background !important;
 
 	.slide-content {
 		padding-top: 8em;
@@ -20,7 +20,6 @@
 	h1 {
 		font-size: 3.8rem;
 		font-weight: 700;
-	  text-shadow: 1px 1px rgba(0, 0, 0, .2);
 	}
 
 	.slide-rotator {
@@ -30,7 +29,6 @@
 	}
 }
 
-
 .me {
 	.avatar {
 		text-align: center;
@@ -38,9 +36,9 @@
 
 		img {
 			display: inline-block;
-	    width: 100%;
-	    height: auto;
-	    max-width: 280px;
+			width: 100%;
+			height: auto;
+			max-width: 280px;
 			border-radius: 50% 50%;
 			border: 2px solid #fff;
 		}
@@ -53,7 +51,7 @@
 
 .social {
 	.social_link {
-		background: rgba(0, 0, 0, .2);
+		background: rgba(0, 0, 0, .35);
 		border-radius: 50% 50%;
 		text-decoration: none;
 		width: 4em;
@@ -74,7 +72,7 @@
 
 	.social_link.glyphiconed {
 		top: -26px;
-    position: relative;
+		position: relative;
 	}
 
 	.facebook:hover {
