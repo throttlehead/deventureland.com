@@ -11,3 +11,16 @@
 	border-color: $theme-background-dark;
   color: $font-color-inverse;
 }
+
+.error-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    margin-bottom: .25em;
+  }
+}
