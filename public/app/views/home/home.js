@@ -48,9 +48,6 @@ define([
 
     viewRendered: function() {
     	this.setSlideCss();
-    	this.initBackStrech();
-    	this.initTextRotator();
-      this.initHoodLatch();
       this.preloadImages();
     },
 
@@ -70,6 +67,9 @@ define([
 
     onLoadComplete: function() {
       this.hideLoader();
+      this.showHoodLatch();
+      this.initBackStrech();
+      this.initTextRotator();      
     },
     
 
@@ -92,7 +92,7 @@ define([
 	      "/img/slideshow/slide2.jpg", 
 	      "/img/slideshow/slide3.jpg", 
 		  ], {
-		  	duration: 3000, 
+		  	duration: 4000, 
 		  	fade: 500
 		  });
     },
@@ -102,16 +102,17 @@ define([
     	this.$el.find(".slide-rotator").textrotator({
 			  animation: "fade",
 			  separator: ",",
-			  speed: 1750
+			  speed: 2250
 			});
     },
+
 
     initHoodLatch: function() {
       var view = this;
 
       setTimeout(function() {
         view.showHoodLatch();
-      }, 2000);
+      }, 1000);
     },
 
 
