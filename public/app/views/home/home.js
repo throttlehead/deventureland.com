@@ -10,7 +10,8 @@ define([
 ], function($, _, Backbone, backstretch, textrotator, Waypoint, PreloadJS, BaseView){
 
   var Home = BaseView.extend({
-    className: "home",
+    id: 'home',
+    className: 'home view dark',
 
     waypoints: {},
 

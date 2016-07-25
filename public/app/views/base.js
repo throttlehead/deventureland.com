@@ -5,7 +5,6 @@ define([
 ], function($, _, Backbone){
 
   var BaseView = Backbone.View.extend({
-    className: "home",
 
     initialize: function(options) {
       if ( typeof this.options == "undefined" ) { this.options = {}; }
