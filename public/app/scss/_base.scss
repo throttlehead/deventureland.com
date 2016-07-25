@@ -49,6 +49,22 @@ body {
   color: $brand-primary;
 }
 
+p {
+  margin-bottom: 1em;
+}
+
+h1 {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: $brand-primary;
+}
+
+a:hover {
+  color: darken($brand-primary, 7%);
+  text-decoration: none;
+}
 
 @media only screen and (max-device-width: 1024px) {
   html {

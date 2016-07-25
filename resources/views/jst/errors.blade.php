@@ -3,6 +3,7 @@
 		<div class="card-block">
       <h1 class="text-center text-brand"><span class="glyphicons glyphicons-exclamation-sign"></span></h1>
       <h3 class="text-center">Page not found</h3>
+      <p class="text-center"><a href="/">Back to home</a></p>
 		</div>
 	</div>
 </script>
