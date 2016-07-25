@@ -48,7 +48,7 @@ define([
 
     viewRendered: function() {
     	this.setSlideCss();
-      this.preloadImages();
+      this.onLoadComplete();
     },
 
 
@@ -62,14 +62,15 @@ define([
       });
 
       queue.load();
+      this.queue = queue;
     },
 
 
     onLoadComplete: function() {
-      this.hideLoader();
       this.showHoodLatch();
       this.initBackStrech();
-      this.initTextRotator();      
+      this.initTextRotator();    
+      this.hideLoader();
     },
     
 
