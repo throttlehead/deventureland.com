@@ -10,8 +10,8 @@ define([
 ], function($, _, Backbone, backstretch, textrotator, Waypoint, PreloadJS, BaseView){
 
   var Home = BaseView.extend({
-    id: 'home',
-    className: 'home view dark',
+    id: "home",
+    className: "home view dark",
 
     waypoints: {},
 
@@ -39,7 +39,7 @@ define([
 
     initListeners: function() {
       this.listenTo( Backbone, "viewRendered", this.viewRendered );
-      this.listenTo( this.app.view_controller, "resize", this.setSlideCss );
+      this.listenTo( this.app.view_controller, "resize", this.setCss );
     },
 
 
@@ -53,7 +53,7 @@ define([
 
 
     viewRendered: function() {
-    	this.setSlideCss();
+    	this.setCss();
       this.preloadImages();
     },
 
@@ -80,7 +80,7 @@ define([
     },
     
 
-    setSlideCss: function(e) {
+    setCss: function(e) {
     	var height = $(window).height();
     	var slide = this.$el.find(".home-slide");
     	var slide_content = slide.children(".slide-content");
@@ -90,8 +90,7 @@ define([
       }
 
     	slide.height(height);
-      console.log(height);
-      this.$el.find(".home-slide").backstretch('resize');
+      this.$el.find(".home-slide").backstretch("resize");
     },
 
 
@@ -119,8 +118,8 @@ define([
     initHoodLatch: function() {
       var view = this;
 
-      var hood_latch = this.$el.find('#hoodLatch');
-      var html = this.$el.find('#hoodLatchHtml').html();
+      var hood_latch = this.$el.find("#hoodLatch");
+      var html = this.$el.find("#hoodLatchHtml").html();
       var view = this;
 
       hood_latch.tooltip({
