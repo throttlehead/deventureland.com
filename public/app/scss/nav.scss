@@ -24,11 +24,12 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 	.navbar-brand {
 		width: 255px;
-    	margin-top: 10px;
+		margin-top: 10px;
 
 		img {
 			width: 100%;
 			height: auto;
+			display: inline-block;
 		}
 	}
 
@@ -167,15 +168,13 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 @media only screen and (max-device-width: 1024px) and (orientation : landscape) {
 	.app-nav {
 		.navbar-brand {
-			width: 50%;
+			width: 40%;
 			margin: 0;
 		}
 
 		.nav-toggle-btn {
-			line-height: 2.75em;
-
 			.glyphicons {
-				font-size: 2em;
+				font-size: 2.5em;
 			}
 		}
 	}
