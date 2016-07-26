@@ -73,7 +73,7 @@ define([
 
 
     onLoadComplete: function() {
-      this.showHoodLatch();
+      this.initHoodLatch();
       this.initBackStrech();
       this.initTextRotator();    
       this.hideLoader();
@@ -117,13 +117,6 @@ define([
     initHoodLatch: function() {
       var view = this;
 
-      setTimeout(function() {
-        view.showHoodLatch();
-      }, 1000);
-    },
-
-
-    showHoodLatch: function() {
       var hood_latch = this.$el.find('#hoodLatch');
       var html = this.$el.find('#hoodLatchHtml').html();
       var view = this;

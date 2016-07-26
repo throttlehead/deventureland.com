@@ -19,6 +19,6 @@
 	</div>
 	<div id="hoodLatch" data-toggle="tooltip" data-title="<a href='https://github.com/throttlehead/deventureland.com' target='_blank'><span class='glyphicons glyphicons-settings'></span>&nbsp;&nbsp;Take a look under the hood</a>"></div>
 	<div id="hoodLatchHtml" style="display: none">
-		<div class="tooltip tooltip-primary tooltip-lg" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner animated shake" id="hoodLatchTooltip"></div></div>
+		<div class="tooltip tooltip-primary tooltip-lg hoodlatch-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner animated shake" id="hoodLatchTooltip"></div></div>
 	</div>	
 </script>
