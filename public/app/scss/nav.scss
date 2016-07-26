@@ -161,7 +161,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 	.app-nav.collapse-shown .navbar {
 		height: 100%;
-		overflow: scroll;
+		overflow-y: auto;
 	}
 }
 
