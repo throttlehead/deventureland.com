@@ -47,7 +47,6 @@ define([
 
 
     onClose: function() {
-      this.hood_latch.tooltip("dispose");
       this.queue.close();
     },
 
@@ -73,7 +72,6 @@ define([
 
 
     onLoadComplete: function() {
-      this.initHoodLatch();
       this.initBackStrech();
       this.initTextRotator();    
       this.hideLoader();
@@ -112,26 +110,6 @@ define([
 			  separator: ",",
 			  speed: 2250
 			});
-    },
-
-
-    initHoodLatch: function() {
-      var view = this;
-
-      var hood_latch = this.$el.find("#hoodLatch");
-      var html = this.$el.find("#hoodLatchHtml").html();
-      var view = this;
-
-      hood_latch.tooltip({
-        placement: "top",
-        template: html,
-        html: true,
-        offset: "10px 0",
-        trigger: "manual"
-      });
-
-      hood_latch.tooltip("show");
-      this.hood_latch = hood_latch;
     }
 
   });
