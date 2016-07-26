@@ -48,6 +48,7 @@ define([
 
     onClose: function() {
       this.hood_latch.tooltip('dispose');
+      this.queue.close();
     },
 
 
