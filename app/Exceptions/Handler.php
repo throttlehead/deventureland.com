@@ -46,7 +46,7 @@ class Handler extends ExceptionHandler
             switch ($statusCode) {
 
                 case '404':
-                    return response()->view('app');
+                    return redirect('404');
             }
         }
         return parent::render($request, $e);

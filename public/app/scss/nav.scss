@@ -24,7 +24,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 	.navbar-brand {
 		width: 255px;
-	    margin-top: 10px;
+		margin-top: 10px;
 
 		img {
 			width: 100%;
@@ -42,7 +42,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 		}
 	}
 
-	.nav-item .nav-link {
+	.nav-item .nav-link, .nav-item .nav-link:focus, .nav-item .nav-link:hover {
 		color: $nav-link-color;
 		cursor: pointer;
 		border-bottom: 3px solid transparent;
