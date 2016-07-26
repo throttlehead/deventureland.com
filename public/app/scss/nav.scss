@@ -42,7 +42,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 		}
 	}
 
-	.nav-item .nav-link, .nav-item .nav-link:focus, .nav-item .nav-link:hover {
+	.nav-item .nav-link {
 		color: $nav-link-color;
 		cursor: pointer;
 		border-bottom: 3px solid transparent;
@@ -136,7 +136,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 		.nav-item {
 			float: none;
-			margin: 1em 0;
+			margin: 1em 0 !important;
 
 			.nav-link {
 				font-size: 2em;

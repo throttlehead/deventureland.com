@@ -103,9 +103,10 @@ define([
       }
 
       if (width <= 1024) {
-        this.collapse();
+        this.$el.find('#app-nav-collapse').removeClass('in');
+        this.onCollapseHide();
       } else {
-        this.expand();
+        this.$el.find('#app-nav-collapse').addClass('in');
       }
     },
 
@@ -113,7 +114,6 @@ define([
     collapse: function() {
       if ($(window).width() <= 1024) {
         this.$el.find('#app-nav-collapse').collapse('hide');
-        this.onCollapseHide();
       }
     },
 
