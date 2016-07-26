@@ -24,7 +24,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 
 	.navbar-brand {
 		width: 255px;
-		margin-top: 7px;
+    	margin-top: 10px;
 
 		img {
 			width: 100%;
@@ -108,7 +108,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 		}
 
 		.navbar-brand {
-			width: 455px;
+			width: 50%;
 			margin: .5em 0 0 0;
 		}
 
@@ -165,7 +165,7 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 @media only screen and (max-device-width: 1024px) and (orientation : landscape) {
 	.app-nav {
 		.navbar-brand {
-			width: 300px;
+			width: 50%;
 			margin: 0;
 		}
 
