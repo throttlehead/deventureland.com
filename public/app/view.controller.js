@@ -2,12 +2,13 @@ define([
   "jquery",
   "underscore",
   "backbone",
+  "views/base",
   "views/nav",
   "views/home/home",
   "views/404",
-], function($, _, Backbone, Nav, Home, NotFound){
+], function($, _, Backbone, BaseView, Nav, Home, NotFound){
 
-  var Controller = Backbone.View.extend({
+  var Controller = BaseView.extend({
     className: "view_controller",
 
     template_hash: {
@@ -72,8 +73,10 @@ define([
 
 
     switchView: function(newView, options) {
-      if (typeof this.app_view === "object" && typeof this.app_view.sub_views === "object") {
-        this.sub_view.closeViews();
+      this.showLoader();
+
+      if (typeof this.sub_view === "object") {
+        this.sub_view.close();
       }
 
       this.renderView(newView, options);
@@ -95,7 +98,7 @@ define([
       var resize_countdown = null;
 
       $( window ).resize(function(e) {
-        clearTimeout( resize_countdown );        
+        clearTimeout( resize_countdown );
 
         resize_countdown = setTimeout(function() {
           self.trigger( 'resize', {
@@ -103,6 +106,13 @@ define([
             height: $(e.currentTarget).height()
           });
         }, 100);
+      });
+
+      window.addEventListener("orientationchange", function(e) {
+        self.trigger( 'resize', {
+          width : $(e.currentTarget).width(),
+          height: $(e.currentTarget).height()
+        });
       });
     }
 

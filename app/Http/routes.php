@@ -22,6 +22,10 @@ Route::group(['middleware' => ['web']], function () {
 	  return view('app');
 	});
 
+	Route::get('/404', function () {
+	  return view('app');
+	});
+
 	Route::post('/message', 'MessagesController@send');
 });
 

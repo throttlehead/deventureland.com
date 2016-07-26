@@ -10,16 +10,16 @@ define([
 ], function($, _, Backbone, backstretch, textrotator, Waypoint, PreloadJS, BaseView){
 
   var Home = BaseView.extend({
-    className: "home",
+    id: "home",
+    className: "home view dark",
 
     waypoints: {},
 
     events: {},
 
-    slide_images: [
+    preload: [
       "/img/slideshow/slide1.jpg", 
-      "/img/slideshow/slide2.jpg", 
-      "/img/slideshow/slide3.jpg"
+      "img/avatars/me.jpg"
     ],
 
 
@@ -39,16 +39,21 @@ define([
 
     initListeners: function() {
       this.listenTo( Backbone, "viewRendered", this.viewRendered );
-      this.listenTo( Backbone, "windowResize", this.setSlideCss );
+      this.listenTo( this.app.view_controller, "resize", this.setCss );
     },
 
 
     initSubviews: function() {},
 
 
+    onClose: function() {
+      this.queue.close();
+    },
+
+
     viewRendered: function() {
-    	this.setSlideCss();
-      this.onLoadComplete();
+    	this.setCss();
+      this.preloadImages();
     },
 
 
@@ -67,14 +72,13 @@ define([
 
 
     onLoadComplete: function() {
-      this.showHoodLatch();
       this.initBackStrech();
       this.initTextRotator();    
       this.hideLoader();
     },
     
 
-    setSlideCss: function(e) {
+    setCss: function(e) {
     	var height = $(window).height();
     	var slide = this.$el.find(".home-slide");
     	var slide_content = slide.children(".slide-content");
@@ -84,6 +88,7 @@ define([
       }
 
     	slide.height(height);
+      this.$el.find(".home-slide").backstretch("resize");
     },
 
 
@@ -105,32 +110,6 @@ define([
 			  separator: ",",
 			  speed: 2250
 			});
-    },
-
-
-    initHoodLatch: function() {
-      var view = this;
-
-      setTimeout(function() {
-        view.showHoodLatch();
-      }, 1000);
-    },
-
-
-    showHoodLatch: function() {
-      var hood_latch = this.$el.find('#hoodLatch');
-      var html = this.$el.find('#hoodLatchHtml').html();
-      var view = this;
-
-      hood_latch.tooltip({
-        placement: "top",
-        template: html,
-        html: true,
-        offset: "10px 0",
-        trigger: "manual"
-      });
-
-      hood_latch.tooltip("show");
     }
 
   });

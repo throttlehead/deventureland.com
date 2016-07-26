@@ -23,6 +23,8 @@ define([
       '/blog'
     ],
 
+    subviews: {},
+
   	
     initialize: function(options) {
       BaseView.prototype.initialize.apply(this, arguments);
@@ -45,7 +47,6 @@ define([
 
     initListeners: function() {
       this.listenTo( this.app.view_controller, 'resize', this.onResize );
-      this.listenTo()
     },
 
 
@@ -102,16 +103,17 @@ define([
       }
 
       if (width <= 1024) {
-        this.collapse();
+        this.$el.find('#app-nav-collapse').removeClass('in');
+        this.onCollapseHide();
       } else {
-        this.expand();
+        this.$el.find('#app-nav-collapse').addClass('in');
       }
     },
 
 
     collapse: function() {
       if ($(window).width() <= 1024) {
-        this.$el.find('#app-nav-collapse').collapse('hide')
+        this.$el.find('#app-nav-collapse').collapse('hide');
       }
     },
 
@@ -119,7 +121,6 @@ define([
     expand: function() {
       if ($(window).width() <= 1024) {
         this.$el.find('#app-nav-collapse').collapse('show');
-        this.onCollapseHide();
       }
     },
 

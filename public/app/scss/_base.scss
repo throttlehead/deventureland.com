@@ -10,7 +10,7 @@ body {
 
 .app {
   .view {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -29,7 +29,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 10000;
+    z-index: 10006;
     background: $theme-background;
 
     .svg {
@@ -45,6 +45,26 @@ body {
     }
 }
 
+.text-brand {
+  color: $brand-primary;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h1 {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: $brand-primary;
+}
+
+a:hover {
+  color: darken($brand-primary, 7%);
+  text-decoration: none;
+}
 
 @media only screen and (max-device-width: 1024px) {
   html {

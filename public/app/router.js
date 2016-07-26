@@ -7,12 +7,10 @@ define([
   var AppRouter = Backbone.Router.extend({
 
     routes: {
-    	''           : 'showHome',
-      'home'       : 'showHome',
-      'login'      : 'showLogin',
-
-      '404':          'showNotFound',
-      '*nomatch': 		'showNotFound'
+    	'': 'showHome',
+      'home': 'showHome',
+      'login': 'showLogin',
+      '404': 'showNotFound',
     },
 
 

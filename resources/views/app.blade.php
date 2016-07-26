@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Deventureland</title>
-    <meta name="description" content="The works and musings of full-time web developer Jacob Smits.">
+    <title>Deventureland | The works and musings of full-time web developer Jacob Smits</title>
+    <meta name="description" content="Deventureland | The works and musings of full-time web developer Jacob Smits.">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     @include('json.app_json')
     <link rel="stylesheet" type="text/css" href="/app/css/glyphicons.css">

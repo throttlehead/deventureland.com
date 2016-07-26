@@ -5,10 +5,6 @@ define([
 ], function($, _, Backbone){
 
   var BaseView = Backbone.View.extend({
-    className: "home",
-
-    subviews: {},
-
 
     initialize: function(options) {
       if ( typeof this.options == "undefined" ) { this.options = {}; }
@@ -38,12 +34,12 @@ define([
 
 
     showLoader: function() {
-      $('#appLoader').stop().fadeIn(250);
+      $('#appLoader').stop().show();
     },
 
 
     hideLoader: function() {
-      $('#appLoader').stop().fadeOut(400);
+      $('#appLoader').stop().delay(400).fadeOut(300);
     }
 
   });
