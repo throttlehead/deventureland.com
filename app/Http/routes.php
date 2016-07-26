@@ -26,6 +26,12 @@ Route::group(['middleware' => ['web']], function () {
 	  return view('app');
 	});
 
+	Route::get('/login', function () {
+		return view('app');
+	});
+
+	Route::post('/login', 'AuthController@postLogin');
+
 	Route::post('/message', 'MessagesController@send');
 });
 
