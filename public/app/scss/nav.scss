@@ -108,8 +108,10 @@ $nav-bg-transparancy: rgba(0, 0, 0, .35);
 		}
 
 		.navbar-brand {
-			width: 50%;
-			margin: .5em 0 0 0;
+	    width: 50%;
+	    margin: 0rem 0 0 0;
+	    line-height: 3em;
+	    padding: 0;
 		}
 
 		.nav-toggle-btn {
