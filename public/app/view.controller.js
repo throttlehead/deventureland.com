@@ -107,6 +107,13 @@ define([
           });
         }, 100);
       });
+
+      window.addEventListener("orientationchange", function(e) {
+        self.trigger( 'resize', {
+          width : $(e.currentTarget).width(),
+          height: $(e.currentTarget).height()
+        });
+      });
     }
 
   });

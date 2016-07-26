@@ -39,7 +39,7 @@ define([
 
     initListeners: function() {
       this.listenTo( Backbone, "viewRendered", this.viewRendered );
-      this.listenTo( Backbone, "windowResize", this.setSlideCss );
+      this.listenTo( this.app.view_controller, "resize", this.setSlideCss );
     },
 
 
@@ -47,7 +47,7 @@ define([
 
 
     onClose: function() {
-      this.hood_latch.tooltip('dispose');
+      this.hood_latch.tooltip("dispose");
       this.queue.close();
     },
 
@@ -90,6 +90,8 @@ define([
       }
 
     	slide.height(height);
+      console.log(height);
+      this.$el.find(".home-slide").backstretch('resize');
     },
 
 

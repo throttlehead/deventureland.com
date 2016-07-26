@@ -47,7 +47,6 @@ define([
 
     initListeners: function() {
       this.listenTo( this.app.view_controller, 'resize', this.onResize );
-      this.listenTo()
     },
 
 
@@ -113,7 +112,8 @@ define([
 
     collapse: function() {
       if ($(window).width() <= 1024) {
-        this.$el.find('#app-nav-collapse').collapse('hide')
+        this.$el.find('#app-nav-collapse').collapse('hide');
+        this.onCollapseHide();
       }
     },
 
@@ -121,7 +121,6 @@ define([
     expand: function() {
       if ($(window).width() <= 1024) {
         this.$el.find('#app-nav-collapse').collapse('show');
-        this.onCollapseHide();
       }
     },
 
