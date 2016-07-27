@@ -17,7 +17,7 @@ define([
 
 
     render: function() {
-      var template = _.template( window.templates.find("#404_t").html());
+      var template = _.template( window.templates.find("#login_t").html());
       this.$el.html( template );
       this.hideLoader();
       return this;      

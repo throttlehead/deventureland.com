@@ -1,3 +1,7 @@
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+@import "variables";
+
 html {
   font-size: 15px;
   color: $font-color;
@@ -15,6 +19,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    padding-top: 64px;
   }
 
   .view.dark {
@@ -57,11 +62,11 @@ h1 {
   margin-bottom: 1.2rem;
 }
 
-a {
+a, .btn-link {
   color: $brand-primary;
 }
 
-a:hover {
+a:hover, .btn-link:hover {
   color: darken($brand-primary, 7%);
   text-decoration: none;
 }
