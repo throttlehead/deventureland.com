@@ -38,33 +38,58 @@ class CreateUser extends Command
      */
     public function handle()
     {
-			$user_name = trim($this->ask('User name:'));
-			$email = trim($this->ask('Email address:'));
+		$user_name = trim($this->ask('User name:'));
+		$email = trim($this->ask('Email address:'));
 
-			$user_check = User::where('email', $email)->first();
-			if (isset($user_check)) {
-				return $this->error('A user with the email address '.$email.' already exists!');
-			}
+		$user_check = User::where('email', $email)->first();
+		if (isset($user_check)) {
+			return $this->error('A user with the email address '.$email.' already exists!');
+		}
 
-			$password = $this->secret('Password:');
-			$confirm_password = $this->secret('Confirm Password:');
+		$password = $this->secret('Password:');
+		$confirm_password = $this->secret('Confirm Password:');
 
-			if ($password !== $confirm_password) {
-				return $this->error('The passwords do not match!');
-			}
+		if ($password !== $confirm_password) {
+			return $this->error('The passwords do not match!');
+		}
 
-			$first_name = trim($this->ask('First name:'));
-			$last_name = trim($this->ask('Last name:'));
+		$first_name = trim($this->ask('First name:'));
+		$last_name = trim($this->ask('Last name:'));
 
-			User::create([
-				'user_name'		=> $user_name,
-				'email'				=> $email,
-				'first_name'	=> $first_name,
-				'last_name'		=> $last_name,
-				'password'		=> bcrypt($password)
-			]);
+        $data = [
+            'user_name' => $user_name,
+            'email' => $email,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'password' => $password
+        ];
 
-			$this->info('Created user '.$email);
+        $validator = $this->validator($data);
 
+        if ($validator->fails()) {
+            return $this->error($validator->messages()->first());
+        }
+
+        $data['password'] = bcrypt($password);
+
+		User::create($data);
+
+		$this->info('Created user '.$email);
+    }
+
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    public function validator(array $data) {
+        return Validator::make($data, [
+            'first_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
+            'user_name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|confirmed|min:6',
+        ]);
     }
 }
