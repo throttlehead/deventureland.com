@@ -6,7 +6,8 @@ define([
   "views/nav",
   "views/home/home",
   "views/404",
-], function($, _, Backbone, BaseView, Nav, Home, NotFound){
+  "views/auth/login",
+], function($, _, Backbone, BaseView, Nav, Home, NotFound, Login){
 
   var Controller = BaseView.extend({
     className: "view_controller",
@@ -18,8 +19,12 @@ define([
       },
       "not_found": {
         "view": NotFound,
-        "title": "Deventureland - 404"
+        "title": "404 - Deventureland"
       },
+      "login": {
+        "view": Login,
+        "title": "Login - Deventureland"
+      }      
     },
 
     subviews: {},
