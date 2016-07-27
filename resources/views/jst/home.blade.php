@@ -13,7 +13,7 @@
 			</div>
 			<div class="inner">
 				<h1>Hello, I'm Jacob</h1>
-				<div class="slide-rotator">Full Stack Developer, Motorcyclist, Sorta Musician</div>
+				<div class="slide-rotator">Full Stack Developer, Motorcyclist, PC Gamer, Sorta Musician, Bicycle Peddler, Constant Learner</div>
 			</div>
 		</div>
 		<div class="hoodlatch-tooltip" role="tooltip">
