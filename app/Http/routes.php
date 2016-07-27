@@ -31,6 +31,7 @@ Route::group(['middleware' => ['web']], function () {
 	});
 
 	Route::post('/login', 'AuthController@postLogin');
+	Route::get('/logout', 'AuthController@logout');
 
 	Route::post('/message', 'MessagesController@send');
 });
