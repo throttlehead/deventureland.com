@@ -1,7 +1,7 @@
 <script type="text/template" id="login_t">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-8 col-sm-12 offset-md-2">
+			<div class="col-lg-6 col-md-8 col-sm-12 offset-md-2 offset-lg-3">
 				<div class="card card-brand center-card">
 					<div class="card-block">
 						<form role="form" method="POST" action="{{ url('/login') }}">
