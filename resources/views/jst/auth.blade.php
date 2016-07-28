@@ -7,7 +7,7 @@
 						<form role="form" method="POST" action="{{ url('/login') }}">
 							{{ csrf_field() }}
 							<div class="form-group">
-								<label for="email" class="control-label">E-Mail Address</label>
+								<label for="email" class="control-label">Email</label>
 								<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
 								@if ($errors->has('email'))
 									<div class="alert alert-danger">
@@ -27,7 +27,7 @@
 							<div class="form-group">
 								<div class="checkbox">
 									<label>
-										<input type="checkbox" name="remember"> Remember Me
+										<input type="checkbox" name="remember"> Remember me
 									</label>
 								</div>
 							</div>
