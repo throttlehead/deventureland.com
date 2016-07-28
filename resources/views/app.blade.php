@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="/app/libraries/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/app/libraries/slick-carousel/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/app/libraries/slick-carousel/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="/app/libraries/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="/app/css/app.css">
   </head>
   <body>
