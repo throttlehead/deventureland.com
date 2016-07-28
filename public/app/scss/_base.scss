@@ -65,7 +65,7 @@ a, .btn-link {
   color: $brand-primary;
 }
 
-a:hover, .btn-link:hover {
+a:hover, a:focus, .btn-link:hover, .btn-link:focus {
   color: darken($brand-primary, 7%);
   text-decoration: none;
 }

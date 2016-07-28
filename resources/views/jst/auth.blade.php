@@ -1,7 +1,7 @@
 <script type="text/template" id="login_t">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 offset-md-2 offset-lg-3">
+			<div class="col-lg-8 col-md-10 col-sm-12 offset-md-1 offset-lg-2">
 				<div class="card card-brand center-card">
 					<div class="card-block">
 						<form role="form" method="POST" action="{{ url('/login') }}">
@@ -35,7 +35,7 @@
 								<button type="submit" class="btn btn-primary btn-lg">
 									<i class="fa fa-btn fa-sign-in"></i> Login
 								</button>
-								<a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+								<!--<a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>-->
 							</div>
 						</form>
 					</div>
