@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Validator;
 use App\User;
 use Illuminate\Console\Command;
 
@@ -40,19 +41,8 @@ class CreateUser extends Command
     {
 		$user_name = trim($this->ask('User name:'));
 		$email = trim($this->ask('Email address:'));
-
-		$user_check = User::where('email', $email)->first();
-		if (isset($user_check)) {
-			return $this->error('A user with the email address '.$email.' already exists!');
-		}
-
 		$password = $this->secret('Password:');
-		$confirm_password = $this->secret('Confirm Password:');
-
-		if ($password !== $confirm_password) {
-			return $this->error('The passwords do not match!');
-		}
-
+		$password_confirmation = $this->secret('Confirm Password:');
 		$first_name = trim($this->ask('First name:'));
 		$last_name = trim($this->ask('Last name:'));
 
@@ -61,7 +51,8 @@ class CreateUser extends Command
             'email' => $email,
             'first_name' => $first_name,
             'last_name' => $last_name,
-            'password' => $password
+            'password' => $password,
+            'password_confirmation' => $password_confirmation
         ];
 
         $validator = $this->validator($data);
