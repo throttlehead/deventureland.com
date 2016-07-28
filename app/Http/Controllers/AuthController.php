@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\User;
 use Validator;
@@ -24,13 +24,34 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
+     * Redirect after successful login
+     *
+     * @var string
+     */    
+    protected $redirectTo = '/admin';
+
+    /**
+     * Redirect after successful logout
+     *
+     * @var string
+     */    
+    protected $redirectAfterLogout  = '/login';
+
+    /**
+     * The guard configuration
+     *
+     * @var string
+     */        
+    protected $guard = 'admin';
+
+    /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        
     }
 
     /**
@@ -57,9 +78,26 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+            'user_name'     => $data['user_name'],
+            'email'         => $data['email'],
+            'first_name'    => $data['first_name'],
+            'last_name'     => $data['last_name'],
+            'password'      => bcrypt($data['password'])
+        ]);        
     }
+
+
+    /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function testlogout()
+    {
+        var_dump('hlleo'); exit;
+        Auth::guard($this->getGuard())->logout();
+
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
+    }
+
 }

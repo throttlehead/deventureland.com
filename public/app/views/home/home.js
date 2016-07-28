@@ -18,7 +18,6 @@ define([
     events: {},
 
     preload: [
-      "/img/slideshow/slide1.jpg", 
       "img/avatars/me.jpg"
     ],
 

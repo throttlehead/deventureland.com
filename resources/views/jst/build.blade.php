@@ -3,3 +3,4 @@
 @include('jst.modules')
 @include('jst.components')
 @include('jst.errors')
+@include('jst.auth')

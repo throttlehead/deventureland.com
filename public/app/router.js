@@ -66,7 +66,7 @@ define([
 
 
     showLogin: function() {
-
+      this.switchView('login');
     }
 
   });
