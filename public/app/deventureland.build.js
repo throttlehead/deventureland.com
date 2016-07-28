@@ -40,7 +40,7 @@
     },
 
     "bootstrap": {
-      deps: ["jquery"],
+      deps: ["jquery", "tether"],
     },
 
     "underscore": {
