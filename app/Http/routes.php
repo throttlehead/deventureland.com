@@ -31,13 +31,18 @@ Route::group(['middleware' => ['web']], function () {
 	});
 
 	Route::post('/login', 'AuthController@postLogin');
+
 	Route::get('/logout', 'AuthController@logout');
 
 	Route::post('/message', 'MessagesController@send');
+
+	Route::get('/sitemap.xml', function() {
+	  $sitemap = App::make("sitemap");
+	  $sitemap->add(URL::to('/'), Carbon::now(), '1.0', 'daily');
+	  return $sitemap->render('xml');
+	});	
 });
 
-Route::get('/sitemap.xml', function() {
-  $sitemap = App::make("sitemap");
-  $sitemap->add(URL::to('/'), Carbon::now(), '1.0', 'daily');
-  return $sitemap->render('xml');
+Route::group(['middleware' => ['admin']], function () {
+	Route::get('/admin', 'AdminController@show');
 });

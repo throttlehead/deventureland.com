@@ -31,11 +31,18 @@ class AuthController extends Controller
     protected $redirectTo = '/admin';
 
     /**
-     * Redirect after successful login
+     * Redirect after successful logout
      *
      * @var string
      */    
     protected $redirectAfterLogout  = '/login';
+
+    /**
+     * The guard configuration
+     *
+     * @var string
+     */        
+    protected $guard = 'admin';
 
     /**
      * Create a new authentication controller instance.

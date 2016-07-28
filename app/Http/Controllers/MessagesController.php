@@ -6,7 +6,7 @@ use Mail;
 use Validator;
 use Response;
 use Carbon\Carbon;
-use App\Models\Message;
+use App\Message;
 use App\Http\Requests;
 use App\Http\Controllers\RestController;
 use Illuminate\Http\Request;
