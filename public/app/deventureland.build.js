@@ -12,22 +12,22 @@
   },
 
   paths: {
-    jquery: "libraries/jquery/dist/jquery",
-    underscore: "libraries/underscore/underscore",
-    backbone: "libraries/backbone/backbone",
-    tether: "libraries/tether/dist/js/tether",
-    bootstrap: "libraries/bootstrap/dist/js/bootstrap",
-    Waypoint: "libraries/waypoints/lib/jquery.waypoints",
-    slick: "libraries/slick-carousel/slick/slick",
-    backstretch: "libraries/jquery-backstretch/jquery.backstretch",
+    jquery: "libraries/jquery/dist/jquery.min",
+    underscore: "libraries/underscore/underscore-min",
+    backbone: "libraries/backbone/backbone-min",
+    tether: "libraries/tether/dist/js/tether.min",
+    bootstrap: "libraries/bootstrap/dist/js/bootstrap.min",
+    Waypoint: "libraries/waypoints/lib/jquery.waypoints.min",
+    slick: "libraries/slick-carousel/slick/slick.min",
+    backstretch: "libraries/jquery-backstretch/jquery.backstretch.min",
     textrotator: "plugins/simple-text-rotator/jquery.simple-text-rotator.min",
-    stellar: "libraries/jquery.stellar/jquery.stellar",
+    stellar: "libraries/jquery.stellar/jquery.stellar.min",
     EasleJS: "libraries/EaselJS/lib/easeljs-0.8.1.combined",
     TweenJS: "libraries/TweenJS/lib/tweenjs-0.6.1.combined",
     PreloadJS: "libraries/PreloadJS/lib/preloadjs-0.6.2.combined",
     validate: "libraries/validatejs/validate.min",
-    serializeJSON: "libraries/jquery.serializeJSON/jquery.serializejson",
-    notify: "libraries/remarkable-bootstrap-notify/bootstrap-notify"
+    serializeJSON: "libraries/jquery.serializeJSON/jquery.serializejson.min",
+    notify: "libraries/remarkable-bootstrap-notify/bootstrap-notify.min"
   },
 
   shim: {
@@ -114,4 +114,4 @@
     }
 
   }
-}); 
+});

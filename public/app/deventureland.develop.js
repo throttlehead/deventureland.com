@@ -111,6 +111,6 @@ require(['tether'], function (Tether) {
 
 require([
   "app",
-], function(App, tether){
+], function(App){
   App.initialize();
 });
