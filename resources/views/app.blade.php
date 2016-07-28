@@ -15,6 +15,7 @@
     <script>
       window.Tether = {};
     </script>
+    @include('plugins.rollbar')
   </head>
   <body>
     <div class="loader" id="appLoader" style="">
