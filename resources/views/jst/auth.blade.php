@@ -6,7 +6,7 @@
 					{{ csrf_field() }}
 					<div class="form-group">
 						<label for="email" class="control-label">Email</label>
-						<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+						<input id="email" type="email" class="form-control form-control-lg" name="email" value="{{ old('email') }}">
 						@if ($errors->has('email'))
 							<div class="alert alert-danger">
 								<strong>{{ $errors->first('email') }}</strong>
@@ -15,7 +15,7 @@
 					</div>
 					<div class="form-group">
 						<label for="password" class="control-label">Password</label>
-						<input id="password" type="password" class="form-control" name="password">
+						<input id="password" type="password" class="form-control form-control-lg" name="password">
 						@if ($errors->has('password'))
 							<div class="alert alert-danger">
 								<strong>{{ $errors->first('password') }}</strong>
