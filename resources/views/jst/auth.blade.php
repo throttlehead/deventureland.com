@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-8 col-md-10 col-sm-12 offset-md-1 offset-lg-2">
-				<div class="card card-brand center-card">
+				<div class="card card-brand center-card" style="display: none">
 					<div class="card-block">
 						<form role="form" method="POST" action="{{ url('/login') }}">
 							{{ csrf_field() }}

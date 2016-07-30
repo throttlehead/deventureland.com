@@ -15,19 +15,19 @@ use Carbon\Carbon;
 
 Route::group(['middleware' => ['web']], function () {
 	Route::get('/', function () {
-	  return view('app');
+	  return view('home');
 	});
 
 	Route::get('/home', function () {
-	  return view('app');
+	  return view('home');
 	});
 
 	Route::get('/404', function () {
-	  return view('app');
+	  return view('home');
 	});
 
 	Route::get('/login', function () {
-		return view('app');
+		return view('home');
 	});
 
 	Route::post('/login', 'AuthController@postLogin');
@@ -43,6 +43,6 @@ Route::group(['middleware' => ['web']], function () {
 	});	
 });
 
-Route::group(['middleware' => ['admin']], function () {
-	Route::get('/admin', 'AdminController@show');
+Route::group(['middleware' => ['dashboard']], function () {
+	Route::get('/dashboard', 'DashboardController@show');
 });

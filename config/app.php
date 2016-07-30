@@ -112,8 +112,6 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
-    'compiled_javascript' => env('COMPILED_JAVASCRIPT', TRUE),
-
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
