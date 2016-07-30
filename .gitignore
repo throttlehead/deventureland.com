@@ -5,5 +5,5 @@ Homestead.yaml
 .sass-cache
 /public/app/css
 /public/app/libraries
-/public/app/*.production-build*
+/public/js/*.production-build*
 *.sh*

@@ -1,9 +1,10 @@
 ({
-  name: "home.develop",
-  out: "home.production-build.js",
+  name: "apps/home/develop",
+  out: "../../home.production-build.js",
   generateSourceMaps: true,
   preserveLicenseComments: false,
   optimize: 'uglify2',
+  baseUrl: "../..",
 
   map: {
     '*': {

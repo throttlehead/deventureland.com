@@ -1,2 +1,2 @@
 /koala-config.json
-/css/*
+*.production-build*
