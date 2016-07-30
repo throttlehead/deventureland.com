@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;GAEG;AAEH;;;YAGY;EACX,YAAY,EAAC,IAAI;;AAElB;;;yBAGyB;EACxB,YAAY,EAAC,SAAM;EACnB,UAAU,EAAC,KAAK;EAChB,YAAY,EAAC,IAAI;;AAElB;;;oCAGoC;EACnC,YAAY,EAAC,IAAI;;AAGlB,KACA;EACA,WAAW,EAAE,IAAI",
-"sources": ["../scss/glyphicons-bootstrap.scss"],
-"names": [],
-"file": "glyphicons-bootstrap.css"
-}
