@@ -7,3 +7,4 @@ Homestead.yaml
 /public/app/libraries
 /public/js/*.production-build*
 *.sh*
+/koala-config.json
