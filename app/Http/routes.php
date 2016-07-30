@@ -34,6 +34,8 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/logout', 'AuthController@logout');
 
+	Route::get('/password/reset', 'AuthController@passwordReset');
+
 	Route::post('/message', 'MessagesController@send');
 
 	Route::get('/sitemap.xml', function() {

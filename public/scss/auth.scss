@@ -1,10 +1,10 @@
-@import "../libraries/bootstrap/scss/variables";
-@import "../libraries/bootstrap/scss/mixins";
+@import "../js/libraries/bootstrap/scss/variables";
+@import "../js/libraries/bootstrap/scss/mixins";
 @import "variables";
 
 #login {
-	.card-brand {
-		margin: 25% auto 0;
+	#loginCard {
+		margin: 0 1em;
 		max-width: 800px;
 	}
 }
