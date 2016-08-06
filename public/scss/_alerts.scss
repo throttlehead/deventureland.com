@@ -1,0 +1,50 @@
+@import "../js/libraries/bootstrap/scss/variables";
+@import "../js/libraries/bootstrap/scss/mixins";
+@import "variables";
+
+.alert {
+	.close {
+    top: -2px;
+    position: relative;
+	}
+}
+
+.alert-info {
+  background-color: #e1f9ff;
+  border-color: #78d5ef;
+  color: $text-info-blue;
+
+  .alert .alert-icon {
+    color: $text-info-blue;
+  }
+}
+
+.alert-danger {
+  background-color: #ffe2d9;
+  border-color: darken(#ffdbd0, 15%);
+  color: $text-info-red;
+
+  .alert .alert-icon {
+    color: $text-info-red;
+  }
+}
+
+.alert-warning {
+  background-color: #fff8d4;
+  border-color: #e8d27d;
+  color: $text-info-yellow;
+
+  .alert .alert-icon {
+    color: $text-info-yellow;
+  }
+}
+
+.alert-success {
+  background-color: #dfffd5;
+  border-color: darken(#d0eec6, 15%);
+  color: $text-info-green;
+
+  .alert .alert-icon {
+    color: $text-info-green;
+  }
+}

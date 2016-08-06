@@ -1,0 +1,83 @@
+@import "../js/libraries/bootstrap/scss/variables";
+@import "../js/libraries/bootstrap/scss/mixins";
+@import "variables";
+
+html {
+  font-size: 15px;
+  color: $font-color;
+}
+
+body {
+  background: $body-bg-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  .view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .view.dark {
+    background: $theme-background;
+    color: $font-color-inverse;
+  }
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10006;
+    background: $theme-background;
+
+    .svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    img {
+      position: relative;
+      top: -40px;
+      left: -40px;
+    }
+}
+
+.text-brand {
+  color: $brand-primary;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h1 {
+  margin-bottom: 1.2rem;
+}
+
+a, .btn-link {
+  color: $brand-primary;
+}
+
+a:hover, a:focus, .btn-link:hover, .btn-link:focus {
+  color: darken($brand-primary, 7%);
+  text-decoration: none;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation : landscape) {
+  html {
+    font-size: 15px;
+  }
+}

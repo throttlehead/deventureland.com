@@ -27,12 +27,12 @@ class MessagesController extends RestController
             'message'   => 'required|filled|bail'
         ]);
 
-        if ($request->session()->has('message_last_sent')) {
+        /*if ($request->session()->has('message_last_sent')) {
             $last_sent = Carbon::parse($request->session()->get('message_last_sent'));
             if (Carbon::now()->subHour()->lt($last_sent)) {
                 return $this->errorResponse('You cannot send more than 1 message an hour', 403);
             }          
-        }
+        }*/
 
         $message = Message::create($request->all());
 

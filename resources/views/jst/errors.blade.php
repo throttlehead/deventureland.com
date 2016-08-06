@@ -1,9 +1,11 @@
 <script type="text/template" id="404_t">
-	<div class="card card-brand error-card">
-		<div class="card-block">
-      <h1 class="text-center text-brand"><span class="glyphicons glyphicons-exclamation-sign"></span></h1>
-      <h3 class="text-center">Page not found</h3>
-      <p class="text-center"><a href="/">Back to home</a></p>
+	<div class="center-card error-card">
+		<div class="card card-brand">
+			<div class="card-block">
+				<h1 class="text-xs-center text-brand"><span class="glyphicons glyphicons-exclamation-sign"></span></h1>
+				<h3 class="text-xs-center">Page not found</h3>
+				<p class="text-xs-center"><a href="/">Back to home</a></p>
+			</div>
 		</div>
 	</div>
 </script>

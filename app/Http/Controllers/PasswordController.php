@@ -21,6 +21,27 @@ class PasswordController extends Controller
     use ResetsPasswords;
 
     /**
+     * View for password request
+     *
+     * @var string
+     */    
+    protected $linkRequestView = 'home';    
+
+    /**
+     * View for password request
+     *
+     * @var string
+     */    
+    protected $resetView = 'home';
+
+    /**
+     * Redirect after successful reset
+     *
+     * @var string
+     */    
+    protected $redirectPath = '/dashboard';    
+
+    /**
      * Create a new password controller instance.
      *
      * @return void

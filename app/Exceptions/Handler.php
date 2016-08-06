@@ -3,7 +3,8 @@
 namespace App\Exceptions;
 
 use Exception;
-use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -39,16 +40,10 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($this->isHttpException($e)) {
-
-            $statusCode = $e->getStatusCode();
-
-            switch ($statusCode) {
-
-                case '404':
-                    return redirect('404');
-            }
+        if ($e instanceof NotFoundHttpException || $e instanceof MethodNotAllowedHttpException) {
+            return redirect('404?attemptedUrl='.$request->path());
         }
+        
         return parent::render($request, $e);
     }
 }

@@ -1,0 +1,137 @@
+@import "../js/libraries/bootstrap/scss/variables";
+@import "../js/libraries/bootstrap/scss/mixins";
+@import "variables";
+
+.home-slide {
+	height: 960px;
+	background: $theme-background !important;
+
+	.slide-content {
+		text-align: center;
+		color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -55%);		
+
+		.inner {
+			padding: 20px 0;
+			background: rgba(0, 0, 0, .35);
+		}
+	}
+
+	h1 {
+		font-size: 3.8rem;
+		font-weight: 700;
+	}
+
+	.slide-rotator {
+		font-size: 2.4rem;
+		font-weight: 600;
+		color: $brand-primary;
+	}
+}
+
+.me {
+	.avatar {
+		text-align: center;
+		padding: 0 15%;
+
+		img {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			max-width: 280px;
+			border-radius: 50% 50%;
+			border: 2px solid #fff;
+		}
+	}
+
+	.social {
+		margin: 2em 0;
+	}
+}
+
+.social {
+	.social_link {
+		background: rgba(0, 0, 0, .35);
+		border-radius: 50% 50%;
+		text-decoration: none;
+		width: 4em;
+		height: 4em;
+		display: inline-block;
+		cursor: pointer;
+		margin: 0 .25em;
+		border: 1px solid #fff;
+
+		transition: all 0.35s ease;
+
+		span {
+			color: #fff;
+			line-height: 2em;
+			font-size: 2em;
+		}
+	}
+
+	.social_link.glyphiconed {
+		top: -26px;
+		position: relative;
+	}
+
+	.facebook:hover {
+		background: #3e5b98;
+		border-color: #3e5b98;
+	}
+
+	.google:hover {
+		background: #dd4b39;
+		border-color: #dd4b39;
+	}
+
+	.linkedin:hover {
+		background: #3371b7;
+		border-color: #3371b7;
+	}
+
+	.stackoverflow:hover {
+		background: #fd9827;
+		border-color: #fd9827;
+	}
+
+	.github:hover {
+		background: #221e1b;
+		border-color: #221e1b;
+	}
+
+	.message:hover {
+		background: #7CC04B;
+		border-color: #7CC04B;
+	}	
+}
+
+.hoodlatch-tooltip {
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: $brand-primary;
+	border-radius: 3px;
+	padding: .5em 1em;
+	font-size: 1.25em;
+
+	a {
+		color: $font-color-inverse;
+	}
+
+  .arrow {
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    margin-left: -10px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-top-color: #ff6c5c;
+  }	
+}

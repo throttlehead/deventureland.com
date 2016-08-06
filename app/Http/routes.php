@@ -15,24 +15,28 @@ use Carbon\Carbon;
 
 Route::group(['middleware' => ['web']], function () {
 	Route::get('/', function () {
-	  return view('app');
+	  return view('home');
 	});
 
 	Route::get('/home', function () {
-	  return view('app');
+	  return view('home');
 	});
 
 	Route::get('/404', function () {
-	  return view('app');
+	  return view('home');
 	});
 
 	Route::get('/login', function () {
-		return view('app');
+		return view('home');
 	});
 
 	Route::post('/login', 'AuthController@postLogin');
-
 	Route::get('/logout', 'AuthController@logout');
+
+	Route::get('/password/send_reset', 'PasswordController@showLinkRequestForm');
+	Route::post('/password/send_reset', 'PasswordController@sendResetLinkEmail');
+	Route::get('/password/reset/{token}', 'PasswordController@showResetForm');
+	Route::post('/password/reset', 'PasswordController@reset');
 
 	Route::post('/message', 'MessagesController@send');
 
@@ -43,6 +47,6 @@ Route::group(['middleware' => ['web']], function () {
 	});	
 });
 
-Route::group(['middleware' => ['admin']], function () {
-	Route::get('/admin', 'AdminController@show');
+Route::group(['middleware' => ['dashboard']], function () {
+	Route::get('/dashboard', 'DashboardController@show');
 });

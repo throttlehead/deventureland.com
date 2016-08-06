@@ -1,0 +1,25 @@
+$body-bg-color: #fcfcfc;
+
+$font-color: #2c2c2c;
+$font-color-inverse: #fefefe;
+
+$brand-primary: #ff6c5c;
+$theme-background: #3e3529;
+$theme-background-dark: darken($theme-background, 10%);
+
+$transition-speed: 250ms;
+$transition-ease: ease-in;
+
+$text-info-blue: #167e9c;
+$text-info-red: #e6402f;
+$text-info-yellow: #d4a903;
+$text-info-green: #17a64b;
+$text-info-purple: #9b59b6;
+
+$black: #333;
+
+$nav-open-color: $theme-background-dark;
+$nav-link-color: $font-color-inverse;
+$nav-link-active-color: $brand-primary;
+$nav-link-color-scrolled: #fafafa;
+$nav-bg-transparancy: rgba(0, 0, 0, .35);
