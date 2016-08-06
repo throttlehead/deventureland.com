@@ -2,6 +2,7 @@
   "name": "deventureland.com",
   "version": "1.0",
   "description": "The personal portfolio and blog of Jacob Smits",
+  "directory":"public/js/libraries",
   "main": "",
   "moduleType": [],
   "authors": [
