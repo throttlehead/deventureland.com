@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/css/glyphicons.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     @include('json.app_json')
     <script>
       window.Tether = {};

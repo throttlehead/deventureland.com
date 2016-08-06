@@ -1,7 +1,7 @@
 <script type="text/template" id="login_t">
 	<div id="loginCard">
-		<div class="center-card">
-			<div class="card card-brand" style="display: none">
+		<div class="center-card auth-card">
+			<div class="card card-brand auth-card" style="display: none">
 				<div class="card-block">
 					<form role="form" method="POST" action="{{ url('/login') }}">
 						{{ csrf_field() }}
@@ -45,7 +45,7 @@
 
 <script type="text/template" id="password_reset_t">
 	<div id="passwordResetCard">
-		<div class="center-card">
+		<div class="center-card auth-card">
 			<div class="card card-brand" style="display: none">
 				<div class="card-block">
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">
@@ -82,6 +82,7 @@
 							<button type="submit" class="btn btn-primary btn-lg">
 								<span class="glyphicons glyphicons-refresh"></span> <span>Reset Password</span>
 							</button>
+							<a class="btn btn-link" href="{{ url('/login') }}">Back to Login</a>
 						</div>
 					</form>
 				</div>
@@ -115,6 +116,7 @@
 							<button type="submit" class="btn btn-primary btn-lg">
 								<span class="glyphicons glyphicons-envelope"></span> <span>Send Password Reset Link</span>
 							</button>
+							<a class="btn btn-link" href="{{ url('/login') }}">Back to Login</a>
 						</div>
 					</form>
 				</div>
