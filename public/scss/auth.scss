@@ -2,8 +2,6 @@
 @import "../js/libraries/bootstrap/scss/mixins";
 @import "variables";
 
-#login {
-	#loginCard {
-        max-width: 800px;
-	}
+.auth-card {
+    max-width: 800px;
 }
