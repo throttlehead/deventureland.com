@@ -39,7 +39,7 @@ class PasswordController extends Controller
      *
      * @var string
      */    
-    protected $redirectTo = '/dashboard';    
+    protected $redirectPath = '/dashboard';    
 
     /**
      * Create a new password controller instance.

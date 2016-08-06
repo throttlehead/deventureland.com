@@ -114,7 +114,7 @@
 						</div>
 						<div class="btn-row">
 							<button type="submit" class="btn btn-primary btn-lg">
-								<span class="glyphicons glyphicons-envelope"></span> <span>Send Password Reset Link</span>
+								<span class="glyphicons glyphicons-envelope"></span> <span>Send Password Reset</span>
 							</button>
 							<a class="btn btn-link" href="{{ url('/login') }}">Back to Login</a>
 						</div>
