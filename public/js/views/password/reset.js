@@ -7,8 +7,8 @@ define([
 ], function($, _, Backbone, BaseView){
 
   var SendReset = BaseView.extend({
-    id: 'sendPasswordReset',
-    className: 'send_password_reset view dark',
+    id: 'passwordReset',
+    className: 'password_reset view dark',
 
 
     initialize: function(options) {
@@ -17,7 +17,7 @@ define([
 
 
     render: function() {
-      var template = _.template( window.templates.find("#send_password_reset_t").html());
+      var template = _.template( window.templates.find("#password_reset_t").html());
       this.$el.html( template );
       this.hideLoader();
       this.animate();

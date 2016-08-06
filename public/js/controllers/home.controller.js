@@ -8,7 +8,8 @@ define([
   "views/404",
   "views/auth/login",
   "views/password/send.reset",
-], function($, _, Backbone, Controller, Nav, Home, NotFound, Login, SendReset){
+  "views/password/reset",
+], function($, _, Backbone, Controller, Nav, Home, NotFound, Login, SendReset, Reset){
 
   var HomeController = Controller.extend({
     id: "homeController",
@@ -21,7 +22,11 @@ define([
       "send_reset": {
         "view": SendReset,
         "title": "Password Reset - Deventureland"
-      },      
+      },
+      "reset": {
+        "view": Reset,
+        "title": "Password Reset - Deventureland"
+      },
       "login": {
         "view": Login,
         "title": "Login - Deventureland"

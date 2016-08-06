@@ -11,7 +11,9 @@ define([
       'home': 'showHome',
       'login': 'showLogin',
       'password/send_reset': 'showSendReset',
+      'password/reset/:token': 'showReset',
       '404': 'showNotFound',
+      '*nomatch': 'showNotFound'
     },
 
 
@@ -73,6 +75,12 @@ define([
 
     showSendReset: function() {
       this.switchView('send_reset');
+    },
+
+
+    showReset: function() {
+      console.log('hello');
+      this.switchView('reset');
     }
 
   });

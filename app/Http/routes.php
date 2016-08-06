@@ -31,10 +31,12 @@ Route::group(['middleware' => ['web']], function () {
 	});
 
 	Route::post('/login', 'AuthController@postLogin');
-
 	Route::get('/logout', 'AuthController@logout');
 
 	Route::get('/password/send_reset', 'PasswordController@showLinkRequestForm');
+	Route::post('/password/send_reset', 'PasswordController@sendResetLinkEmail');
+	Route::get('/password/reset/{token}', 'PasswordController@showResetForm');
+	Route::post('/password/reset', 'PasswordController@sendResetLinkEmail');
 
 	Route::post('/message', 'MessagesController@send');
 
