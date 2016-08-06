@@ -34,7 +34,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/logout', 'AuthController@logout');
 
-	Route::get('/password/reset', 'AuthController@passwordReset');
+	Route::get('/password/send_reset', 'PasswordController@showLinkRequestForm');
 
 	Route::post('/message', 'MessagesController@send');
 

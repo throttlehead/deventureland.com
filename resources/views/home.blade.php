@@ -6,8 +6,6 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/js/libraries/animate.css/animate.css">
     <link rel="stylesheet" type="text/css" href="/js/libraries/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/js/libraries/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="/js/libraries/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="/css/glyphicons.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/app.css">

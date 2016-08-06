@@ -10,6 +10,7 @@ define([
     	'': 'showHome',
       'home': 'showHome',
       'login': 'showLogin',
+      'password/send_reset': 'showSendReset',
       '404': 'showNotFound',
     },
 
@@ -67,6 +68,11 @@ define([
 
     showLogin: function() {
       this.switchView('login');
+    },
+
+
+    showSendReset: function() {
+      this.switchView('send_reset');
     }
 
   });

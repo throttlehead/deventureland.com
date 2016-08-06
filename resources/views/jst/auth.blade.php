@@ -88,10 +88,10 @@
 	</form>
 </script>
 
-<script type="text/template" id="password_email_t">
+<script type="text/template" id="send_password_reset_t">
 	@if (session('status'))
 		<div class="alert alert-success">
-	{{ session('status') }}
+			{{ session('status') }}
 		</div>
 	@endif
 	<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
