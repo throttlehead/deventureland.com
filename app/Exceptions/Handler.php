@@ -40,10 +40,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof NotFoundHttpException || $e instanceof MethodNotAllowedHttpException) {
-            return redirect('404?attemptedUrl='.$request->path());
-        }
-        
+       
         return parent::render($request, $e);
     }
 }

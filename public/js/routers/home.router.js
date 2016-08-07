@@ -1,102 +1,48 @@
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-], function($, _, Backbone){
+    'jquery',
+    'underscore',
+    'backbone',
+    'routers/router'
+], function($, _, Backbone, Router){
+    var HomeRouter = Router.extend({
+        routes: {
+            '': 'showHome',
+            'home': 'showHome',
+            'login': 'showLogin',
+            'password/send_reset': 'showSendReset',
+            'password/reset/:token': 'showReset',
+            '404': 'showNotFound',
+            '*nomatch': 'showNotFound'
+        },
 
-  var AppRouter = Backbone.Router.extend({
+        showHome: function() {
+            this.switchView('home');
+        },
 
-    routes: {
-    	'': 'showHome',
-      'home': 'showHome',
-      'login': 'showLogin',
-      'password/send_reset': 'showSendReset',
-      'password/reset/:token': 'showReset',
-      '404': 'showNotFound',
-      '*nomatch': 'showNotFound'
-    },
+        showBlog: function() {
+            this.switchView('blog');
+        },
 
+        showProjects: function() {
+            this.switchView('projects');
+        },
 
-    initialize: function(view_controller) {
-    	this.view_controller = view_controller;
-    	this.initLinkPushStateHijack();
-    },
+        showNotFound: function() {
+            this.switchView('not_found');
+        },
 
+        showLogin: function() {
+            this.switchView('login');
+        },
 
-    initLinkPushStateHijack: function() {
-    	var self = this;
+        showSendReset: function() {
+            this.switchView('send_reset');
+        },
 
-      $(document).on("click", "a[href]:not([data-bypass])", function(e) {
-        var href = $(this).attr("href");
-
-        if (href.length <= 0) { return; }
-
-        if (href[0] === '/') { 
-        	href = href.slice(1, href.length); 
+        showReset: function() {
+            this.switchView('reset');
         }
+    });
 
-        if (_.has(self.routes, href)) {
-          e.preventDefault();
-          Backbone.history.navigate(href, {trigger: true});
-        }
-      });
-    },
-
-
-    switchView: function(view) {
-      this.view_controller.switchView(view);
-    },
-
-
-    showHome: function() {
-    	this.switchView('home');
-    },
-
-
-    showBlog: function() {
-    	this.switchView('blog');
-    },
-
-
-    showProjects: function() {
-    	this.switchView('projects');
-    },
-
-
-    showNotFound: function() {
-    	this.switchView('not_found');
-    },
-
-
-    showLogin: function() {
-      this.switchView('login');
-    },
-
-
-    showSendReset: function() {
-      this.switchView('send_reset');
-    },
-
-
-    showReset: function() {
-      console.log('hello');
-      this.switchView('reset');
-    }
-
-  });
-
-  var initialize = function(view_controller){
-  	if (!_.isObject(window.app)) {
-  		window.app = {};
-  	}
-
-    window.app.router = new AppRouter(view_controller);
-
-    Backbone.history.start({pushState: true});
-  };
-
-  return {
-    initialize: initialize
-  };
-
+    return HomeRouter;
 });

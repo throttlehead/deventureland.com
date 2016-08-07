@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Deventureland | The works and musings of full-time web developer Jacob Smits</title>
+    <title>Dashboard | Deventureland.com</title>
     <meta name="description" content="Deventureland | The works and musings of full-time web developer Jacob Smits.">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/app/css/glyphicons.css">
-    <link rel="stylesheet" type="text/css" href="/app/css/social.css">
-    <link rel="stylesheet" type="text/css" href="/app/libraries/animate.css/animate.css">
-    <link rel="stylesheet" type="text/css" href="/app/libraries/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/app/libraries/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="/app/libraries/slick-carousel/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="/app/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/js/libraries/animate.css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/js/libraries/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/glyphicons.css">
+    <link rel="stylesheet" type="text/css" href="/css/social.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     @include('json.app_json')
+    @include('plugins.rollbar')
     <script>
       window.Tether = {};
-    </script>
-    @include('plugins.rollbar')
+    </script>    
   </head>
   <body>
     <div class="loader" id="appLoader" style="">
@@ -28,9 +27,9 @@
 	    <div class="app" id="app"></div>
 	  </div>
     <?php if (App::environment() === 'production' || config('app.debug') === false) { ?>
-      <script data-main="/app/deventureland.production-build.js" src="/app/libraries/requirejs/require.js"></script>
+      <script data-main="/js/dashboard.production-build.js" src="/js/libraries/requirejs/require.js"></script>
     <?php } else { ?>
-      <script data-main="/app/deventureland.develop.js" src="/app/libraries/requirejs/require.js"></script>
+      <script data-main="/js/apps/dashboard/develop.js" src="/js/libraries/requirejs/require.js"></script>
     <?php } ?>  
   </body>
 </html>

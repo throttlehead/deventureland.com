@@ -35,6 +35,13 @@ class PasswordController extends Controller
     protected $resetView = 'home';
 
     /**
+     * The guard configuration
+     *
+     * @var string
+     */        
+    protected $guard = 'dashboard';    
+
+    /**
      * Redirect after successful reset
      *
      * @var string
@@ -48,6 +55,6 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('web');
     }
 }

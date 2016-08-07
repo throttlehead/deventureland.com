@@ -15,6 +15,13 @@ class Authenticate
     protected $auth;
 
     /**
+     * The Guard implementation.
+     *
+     * @var Guard
+     */
+    protected $guard = 'dashboard';    
+
+    /**
      * Create a new filter instance.
      *
      * @param  Guard  $auth

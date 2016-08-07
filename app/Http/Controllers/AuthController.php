@@ -85,19 +85,4 @@ class AuthController extends Controller
             'password'      => bcrypt($data['password'])
         ]);        
     }
-
-
-    /**
-     * Log the user out of the application.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function testlogout()
-    {
-        var_dump('hlleo'); exit;
-        Auth::guard($this->getGuard())->logout();
-
-        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
-    }
-
 }

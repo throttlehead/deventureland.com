@@ -8,3 +8,4 @@ Homestead.yaml
 /public/js/*.production-build*
 *.sh*
 /koala-config.json
+nohup.out
