@@ -8,3 +8,5 @@ Homestead.yaml
 /public/js/*.production-build*
 *.sh*
 /koala-config.json
+*sublime-workspace
+
